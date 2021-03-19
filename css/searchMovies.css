@@ -90,8 +90,8 @@ section {
 }
 .imageContainer {
     color: var(--font-color);
-    width: 200px;
-    height: 300px;
+    width: 250px;
+    height: 350px;
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -111,7 +111,7 @@ section {
 }
 .imageContainer p{
     text-align: center;
-    font-size: x-small;
+    font-size: small;
     font-weight: 700;
 }
 
