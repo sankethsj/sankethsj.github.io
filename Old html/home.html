@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/searchMovies.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="icon" href="./assets/favicon.jpg" type="image/jpg" sizes="16x16">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet" />
+    <title>Movies Archive - Search any hollywood movie</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="head">Movies<span> archive</span></div>
+        <br>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+            <em>Enable Dark Mode!</em>
+        </div>
+    </div>
+
+    <div class="ta"><a href="index.html">Go to TOP6 by SJ</a></div>
+
+    <form>
+        <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Search Archive" />
+            <button type="submit" class="btn" id="search">
+                Search
+            </button>
+        </div>
+
+
+    </form>
+
+    <div id="movies-searchable"></div>
+    <div id="movies-container"></div>
+
+    <div class="box">
+        <h3>TOP6 movies/series recommendations by SJ</h3>
+        <a href="index.html">Click here</a>
+    </div>
+
+    <div class="feedback">
+        <h1 class="feed" style="text-align: center;">Got something in your mind?</h1>
+        <p><i class="fa fa-music" aria-hidden="true"></i> Give me some sunshine <i class="fa fa-music"
+                aria-hidden="true"></i>
+            <br><i class="fa fa-music" aria-hidden="true"></i> Give me some feedback <i class="fa fa-music"
+                aria-hidden="true"></i>
+            <br><i class="fa fa-music" aria-hidden="true"></i> Give me another chance <i class="fa fa-music"
+                aria-hidden="true"></i><br>
+            <i class="fa fa-music" aria-hidden="true"></i> I wanna update once again <i class="fa fa-music"
+                aria-hidden="true"></i>
+            <br><i class="fa fa-music" aria-hidden="true"></i> Na na na...na na naa... <i class="fa fa-music"
+                aria-hidden="true"></i>
+        </p>
+
+        <a onclick="alert('Feedback will be available soon.')" class="feedBtn">Feedback</a>
+    </div>
+
+    <button id="myBtn" class="scrollTop" onclick="scrollAnimationStep(500)">TOP</button>
+
+    <div class="footer">
+        <p>Copyright 2021. All Rights Reserved. Design by <a href="/profile.html">Sanketh Jain</a></p>
+    </div>
+</body>
+<script src="js/darkMode.js"></script>
+<script src="js/apiTransaction.js"></script>
+<script src="js/searchMovies.js"></script>
+<script src="js/scrollToTop.js"></script>
+</html>
