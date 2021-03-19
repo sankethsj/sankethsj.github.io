@@ -182,4 +182,25 @@ section {
         left: 20px;
         font-size: 40px;
     }
+    .imageContainer {
+        color: var(--font-color);
+        width: 300px;
+        height: 400px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        cursor: pointer;
+        border-radius: 12px;
+        border: none;
+        box-shadow: 10px 10px 20px var(--boxshadow2),
+        -10px -10px 20px var(--boxshadow1);
+    }
+    .imageContainer p{
+        text-align: center;
+        font-size: medium;
+        font-weight: 700;
+    }
 }
