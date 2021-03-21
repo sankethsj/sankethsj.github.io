@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="/bingers/css/profile.css">
+    <link rel="icon" href="./assets/favicon.jpg" type="image/jpg" sizes="16x16">
+    <link rel="stylesheet" href="/bingers/css/style.css">
+    <link rel="stylesheet" href="/sipCalculator/sip.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Sanketh Jain - SIP Calculator</title>
+</head>
+
+<body style="width: 100%; height: 100%; ">
+
+    <div class="header">
+        <div class="head">SIP<span>Calculator</span></div>
+
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+            <em>Enable Dark Mode!</em>
+        </div>
+        <h2 style="text-align: center;">Systematic Investment Plan</h2>
+    </div>
+
+    <div class="container">
+        <form id="sipForm">
+            <input id="amount" type="number" placeholder="Monthly SIP Amount in Rs."/><br /><br />
+            <input id="year" type="number" placeholder="Investing period in No. of Years" /><br /><br />
+            <input id="cagr" type="number" placeholder="Expected Annual Return in (%)" /><br /><br />
+            <button type="button" id="calc" onclick="calculate()">Calculate</button>
+            <button type="button" id="reset" onclick="resetForm()">Reset</button>
+        </form>
+        <div class="sipValue">
+            <h2 id="roi">Your Total Invested Amount after <div id="tyears"></div> years will be <div id="tamount"></div></h2>
+        </div>
+    </div>
+
+    <h4>
+        You can calculate your investment value by entering
+        how much amount you'll invest per month <br> and
+        for how long and your expected annual returns.<br>Note: Expected Compound Annual Growth Rate(CAGR)
+        might vary year on year(YoY).
+    </h4>
+
+    <div class="footer">
+        <p>Copyright 2021. All Rights Reserved. Design by <a href="/index.html">Sanketh Jain</a></p>
+    </div>
+
+    <script src="/bingers//js/darkMode.js"></script>
+
+    <script type="text/javascript">
+        function calculate() {
+            event.preventDefault();
+            amount = document.getElementById('amount').value;
+            noOfyear = document.getElementById('year').value;
+            returns = document.getElementById('cagr').value;
+            if (amount == "" || noOfyear == "" || returns == "") {
+                alert("Please fill all input fields!!!")
+            }
+            else {
+                document.getElementById('roi').style.display = 'block';
+                yearlyAmount = amount * 12;
+                temp = 0;
+                for (var i = 0; i < noOfyear; i++) {
+                    var ret = (yearlyAmount * returns / 100);
+                    temp = yearlyAmount + ret;
+                    yearlyAmount = temp + amount * 12;
+                }
+                document.getElementById('tyears').innerHTML = noOfyear;
+                document.getElementById('tamount').innerHTML =
+                    temp.toLocaleString('en-IN', {
+                        maximumFractionDigits: 0,
+                        style: 'currency',
+                        currency: 'INR'
+                    });;
+            }
+            return false;
+        }
+        function resetForm(){
+            event.preventDefault();
+            document.getElementById('roi').style.display = 'none';
+            document.getElementById('amount').value = '';
+            document.getElementById('year').value = '';
+            document.getElementById('cagr').value = '';
+        }
+    </script>
+</body>
+
+</html>

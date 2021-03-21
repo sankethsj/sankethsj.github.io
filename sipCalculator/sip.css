@@ -1,0 +1,82 @@
+.container{
+    width: fit-content;
+    color: var(--font-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin: 0px 20px;
+    border-radius: 10px;
+    box-shadow: -10px -10px 20px var(--boxshadow1), 10px 10px 20px var(--boxshadow2);
+}
+
+h4{
+    color: var(--font-color);
+    margin: 20px;
+    padding: 10px;
+    text-align: justify;
+    opacity: 0.5;
+}
+
+#sipForm input{
+    color: var(--font-color);
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: transparent;
+    box-shadow: inset -5px -5px 10px var(--boxshadow1), 
+                inset 5px 5px 10px var(--boxshadow2);
+}
+#sipForm button{
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+.sipValue{
+    margin: 20px;
+    text-align: center;
+}
+#tyears,#tamount{
+    font-size: 40px;
+    color: var(--primary-color);
+}
+#calc{
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    transition: 0.3s;
+}
+#reset{
+    margin-left: 20px;
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    transition: 0.3s;
+}
+#calc:hover,#reset:hover{
+    transform: scale(1.1);
+}
+#roi{
+    display: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
