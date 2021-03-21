@@ -40,3 +40,11 @@ img{
     transform: scale(1.5);
     color: var(--primary-color);
 }
+@media only screen and (max-width: 768px) {
+    img{
+        width: 80vw;
+        height: max-content;
+        padding: 20px 0;
+        object-fit: contain;
+    }
+  }
