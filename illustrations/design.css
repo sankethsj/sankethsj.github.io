@@ -2,6 +2,8 @@ h1{
     color: var(--font-color);
 }
 .container{
+    width: fit-content;
+    height: fit-content;
     position: relative;
     display: flex;
     justify-content: center;
