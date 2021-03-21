@@ -1,0 +1,43 @@
+h1{
+    color: var(--font-color);
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: -10px -10px 20px var(--boxshadow1), 10px 10px 20px var(--boxshadow2);
+}
+img{
+    width: 80vw;
+    height: 80vh;
+    margin: 20px;
+    padding: 20px;
+    object-fit: contain;
+}
+.next{
+    color: var(--font-color);
+    font-size: 40px;
+    font-weight: 500;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    transition: 0.3s ease-in;
+}
+.prev{
+    color: var(--font-color);
+    font-size: 40px;
+    font-weight: 500;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    transition: 0.3s ease-in;
+}
+.prev:hover, .next:hover{
+    transform: scale(1.5);
+    color: var(--primary-color);
+}

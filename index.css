@@ -16,12 +16,12 @@
     margin: 20px 20px;
     border-radius: 10px;
     box-shadow: -10px -10px 20px var(--boxshadow1), 10px 10px 20px var(--boxshadow2);
-    transition: 0.4s;
+    transition: .3s ease-in;
 }
 .project:hover{
     transform: scale(1.1);
 }
-.projects a:hover{
+.project a:hover{
     color: var(--primary-color);
 }
 .projects a{
@@ -29,5 +29,9 @@
     text-decoration: none;
     font-size: 30px;
     font-weight: 700;
+    text-align: center;
+}
+h1{
+    color: var(--font-color);
     text-align: center;
 }
