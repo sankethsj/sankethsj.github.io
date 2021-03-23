@@ -32,9 +32,9 @@ function handleGeneralError(error) {
 function createIframe(video) {
     const videoKey = (video && video.key) || 'No key found!!!';
     const iframe = document.createElement('iframe');
-    iframe.src = `http://www.youtube.com/embed/${videoKey}`;
-    iframe.width = 360;
-    iframe.height = 215;
+    iframe.src = `https://www.youtube.com/embed/${videoKey}`;
+    iframe.width = 420;
+    iframe.height = 315;
     iframe.allowFullscreen = true;
     return iframe;
 }
