@@ -8,16 +8,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="stylesheet" href="/bingers/css/profile.css">
     <link rel="stylesheet" href="/bingers/css/style.css">
+    <link rel="stylesheet" href="range.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
     <title>Sanketh Jain - Index Range Calculator</title>
 </head>
 
 <body>
     <div class="header">
-        <div class="head">Sanketh<span>Jain</span></div>
-        
+        <div class="head">Index <span>Open Interest</span></div>
+
         <div class="theme-switch-wrapper">
             <label class="theme-switch" for="checkbox">
                 <input type="checkbox" id="checkbox" />
@@ -25,26 +25,47 @@
             </label>
             <em>Enable Dark Mode!</em>
         </div>
-        <h1>Checkout my Projects</h1>
     </div>
 
-    <div class="container" style="display: flex;">
+    <div class="container">
+        <select name="index" id="index" onchange="changeoi(this);">
+            <option value="niftyoilist" selected>NIFTY</option>
+            <option value="bankniftyoi">BANKNIFTY</option>
+        </select>
         <div class="box1">
-            <h3>BANK NIFTY RANGE CALCULATOR</h3><br>
-            <form>
-                <label>Enter Bank Nifty Open Price: </label><br>
-                <input type="number" id="niftyVal" placeholder="Bank Nifty Open Price"><br><br>
-                <label>Enter ATM Option IV: </label><br>
-                <input type="number" id="vix" placeholder="ATM option IV"><br><br>
-                <button type="button" onclick="findrange()">Find Range</button>
-            </form>
+            <div class="ce">
+                <h2>Total Call OI: </h2>
+                <h2 id="totalce"></h2>
+            </div>
+            <div class="pe">
+                <h2>Total Put OI: </h2>
+                <h2 id="totalpe"></h2>
+            </div>
+            <div class="diff">
+                <h2>Difference OI: </h2>
+                <h2 id="diffoi"></h2>
+            </div>
+            <div class="pcr">
+                <h2>PUT/CALL Ratio: </h2>
+                <h2 id="pcr"></h2>
+            </div>
         </div>
-        <div class="box2" style="margin-left: 40px; margin-top: 80px;">
-            <h3 id="result"></h3>
-        </div>
+    </div>
+
+    <div id="oidata">
+        Option Chain(Strikes near to ATM only)
+    </div>
+    <div id="showData">
+    </div>
+
+
+    <div class="footer">
+        <p>Copyright 2021. All Rights Reserved. Design by <a href="/index.html">Sanketh Jain</a></p>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="range.js"></script>
-    
+    <script src="/bingers/js/darkMode.js"></script>
+
 </body>
+
 </html>

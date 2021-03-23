@@ -1,0 +1,49 @@
+body{
+    color: var(--font-color);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#oidata{
+    margin: 20px;
+    font-size: 20px;
+}
+#index{
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    color: var(--font-color);
+    background-color: var(--bg-color);
+    margin: 40px auto;
+}
+.ce,.pe, .pcr, .diff{
+    display: flex;
+}
+#diffoi{
+    color: var(--primary-color);
+}
+#totalce{
+    color: var(--call);
+}
+#totalpe{
+    color: var(--put);
+}
+h2{
+    margin: 10px;
+}
+th, td{
+    font-size: 24px;
+}
+table, th, td {
+    border: solid 1px #444444;
+    border-collapse: collapse;
+    padding: 4px 8px;
+    text-align: center;
+}
+th {
+    font-weight:bold;
+}
