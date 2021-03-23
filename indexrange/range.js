@@ -31,8 +31,5 @@ function findrange() {
     return false
 }
 
-
-$.get('https://www.nseindia.com/api/option-chain-indices?symbol=NIFTY',
-function(response) {  
-    console.log(response);
-});
+fetch('https://www.nseindia.com/api/option-chain-indices?symbol=NIFTY')
+  .then(json => console.log(json));
