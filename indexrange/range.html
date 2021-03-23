@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="stylesheet" href="/bingers/css/profile.css">
-    <link rel="icon" href="./assets/favicon.jpg" type="image/jpg" sizes="16x16">
     <link rel="stylesheet" href="/bingers/css/style.css">
-    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Sanketh Jain - Index Range Calculator</title>
@@ -44,44 +42,8 @@
             <h3 id="result"></h3>
         </div>
     </div>
-
-    <script type="text/javascript">
-        function findrange() {
-            event.preventDefault();
-            var nif = document.getElementById('niftyVal').value;
-            var vi = document.getElementById('vix').value;
-            if (nif == "" || vi == "" ) {
-                alert("Please enter values on both fields!!!")
-            }
-            else {
-                nif = parseInt(nif);
-                vi = parseInt(vi);
-                volm = vi / Math.sqrt(12);
-                volw = vi / Math.sqrt(52);
-                vold = vi / Math.sqrt(365);
-
-                var ahigh, alow, mhigh, mlow, whigh, wlow, dhigh, dlow;
-                ahigh = parseInt(nif + ((nif * vi) / 100));
-                alow = parseInt(nif - ((nif * vi) / 100));
-                mhigh = parseInt(nif + ((nif * volm) / 100));
-                mlow = parseInt(nif - ((nif * volm) / 100));
-                whigh = parseInt(nif + ((nif * volw) / 100));
-                wlow = parseInt(nif - ((nif * volw) / 100));
-                dhigh = parseInt(nif + ((nif * vold) / 100));
-                dlow = parseInt(nif - ((nif * vold) / 100));
-
-                document.getElementById('result').innerHTML = "Daily High/Low  = " + dhigh + " - " + dlow + "<br><br>" +
-                    "Weekly High/Low  = " + whigh + " - " + wlow + "<br><br>" +
-                    "Monthly High/Low = " + mhigh + " - " + mlow + "<br><br>" +
-                    "Annual High/Low  = " + ahigh + " - " + alow;
-            }
-            return false
-        }
-
-    </script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="range.js"></script>
+    
 </body>
-
-
-
 </html>
