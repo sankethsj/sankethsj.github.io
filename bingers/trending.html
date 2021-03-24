@@ -11,7 +11,7 @@
     <link rel="icon" href="./assets/favicon.jpg" type="image/jpg" sizes="16x16">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet" />
-    <title>Movies Archive - Search any hollywood movie</title>
+    <title>Movies Archive - Trending Movies</title>
 </head>
 
 <body>
@@ -27,48 +27,22 @@
         </div>
     </div>
 
-    <form>
-        <div class="form-group">
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Search Archive" />
-            <button type="submit" class="btn" id="search">
-                Search
-            </button>
-        </div>
-
-
-    </form>
 
     <div class="nav">
         <a href="/bingers/top-rated.html">Top Rated Movies</a>
         <a href="/bingers/upcoming.html">Upcoming Movies</a>
         <a href="/bingers/trending.html">Trending Movies</a>
         <a href="/bingers/popular.html">Popular Movies</a>
+        <a href="/bingers/home.html">Search Movies</a>
     </div>
 
-    <div id="movies-searchable"></div>
+    <div id="movies-container"></div>
 
     <div class="box">
         <h3>TOP6 movies/series recommendations by SJ</h3>
         <a href="movies.html">Click here</a>
     </div>
 
-    <div class="feedback">
-        <h1 class="feed" style="text-align: center;">Got something in your mind?</h1>
-        <p><i class="fa fa-music" aria-hidden="true"></i> Give me some sunshine <i class="fa fa-music"
-                aria-hidden="true"></i>
-            <br><i class="fa fa-music" aria-hidden="true"></i> Give me some feedback <i class="fa fa-music"
-                aria-hidden="true"></i>
-            <br><i class="fa fa-music" aria-hidden="true"></i> Give me another chance <i class="fa fa-music"
-                aria-hidden="true"></i><br>
-            <i class="fa fa-music" aria-hidden="true"></i> I wanna update once again <i class="fa fa-music"
-                aria-hidden="true"></i>
-            <br><i class="fa fa-music" aria-hidden="true"></i> Na na na...na na naa... <i class="fa fa-music"
-                aria-hidden="true"></i>
-        </p>
-
-        <a onclick="alert('Feedback will be available soon.')" class="feedBtn">Feedback</a>
-    </div>
 
     <button id="myBtn" class="scrollTop" onclick="scrollAnimationStep(500)">TOP</button>
 
@@ -80,4 +54,5 @@
 <script src="js/apiTransaction.js"></script>
 <script src="js/searchMovies.js"></script>
 <script src="js/scrollToTop.js"></script>
+<script src="js/trending.js"></script>
 </html>

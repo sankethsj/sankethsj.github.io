@@ -1,9 +1,8 @@
-const log = console.log;
-
+let log = console.log;
 // Selecting elements from the DOM
 const searchButton = document.querySelector('#search');;
 const searchInput = document.querySelector('#exampleInputEmail1');
-const moviesContainer = document.querySelector('#movies-container');
+var moviesContainer = document.querySelector('#movies-container');
 const moviesSearchable = document.querySelector('#movies-searchable');
 
 function createImageContainer(imageUrl, id, title) {
@@ -142,7 +141,6 @@ searchButton.onclick = function (event) {
 // Click on any movies
 // Event Delegation
 document.onclick = function (event) {
-    log('Event: ', event);
     const { tagName, id } = event.target;
     if (tagName.toLowerCase() === 'img') {
         const movieId = event.target.dataset.movieId;
@@ -158,4 +156,3 @@ document.onclick = function (event) {
     }
 }
 
-searchPopularMovie();
