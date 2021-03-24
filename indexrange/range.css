@@ -20,7 +20,7 @@ body{
     background-color: var(--bg-color);
     margin: 40px auto;
 }
-.ce,.pe, .pcr, .diff{
+.ce,.pe, .diff{
     display: flex;
 }
 #diffoi{
@@ -36,7 +36,7 @@ h2{
     margin: 10px;
 }
 th, td{
-    font-size: 24px;
+    font-size: 20px;
 }
 table, th, td {
     border: solid 1px #444444;

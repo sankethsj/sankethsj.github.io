@@ -29,9 +29,10 @@
 
     <div class="container">
         <select name="index" id="index" onchange="changeoi(this);">
-            <option value="niftyoilist" selected>NIFTY</option>
-            <option value="bankniftyoi">BANKNIFTY</option>
+            <option value="niftyoichange" selected>NIFTY</option>
+            <option value="bankniftyoichange">BANKNIFTY</option>
         </select>
+        
         <div class="box1">
             <div class="ce">
                 <h2>Total Call OI: </h2>
@@ -44,10 +45,6 @@
             <div class="diff">
                 <h2>Difference OI: </h2>
                 <h2 id="diffoi"></h2>
-            </div>
-            <div class="pcr">
-                <h2>PUT/CALL Ratio: </h2>
-                <h2 id="pcr"></h2>
             </div>
         </div>
     </div>
