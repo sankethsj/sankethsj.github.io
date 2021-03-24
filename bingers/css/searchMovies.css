@@ -229,9 +229,9 @@ section {
     .nav{
         margin-top: 20px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
-        color: var(--font-color);
         background-color: var(--primary-color);
         font-size: 8px;
     }
