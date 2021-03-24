@@ -84,7 +84,7 @@ input[type=number] {
 @media only screen and (max-width: 768px) {
     #sipForm input{
         color: var(--font-color);
-        width: 300px;
+        width: 250px;
         height: 40px;
         padding: 10px;
         font-size: 14px;
