@@ -36,7 +36,7 @@ h2{
     margin: 10px;
 }
 th, td{
-    font-size: 20px;
+    font-size: 24px;
 }
 table, th, td {
     border: solid 1px #444444;
@@ -47,3 +47,8 @@ table, th, td {
 th {
     font-weight:bold;
 }
+@media only screen and (max-width: 768px) {
+    th, td{
+        font-size: 14px;
+    }
+  }
