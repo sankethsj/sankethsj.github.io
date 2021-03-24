@@ -80,3 +80,20 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+@media only screen and (max-width: 768px) {
+    #sipForm input{
+        color: var(--font-color);
+        width: 300px;
+        height: 40px;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        background-color: transparent;
+        box-shadow: inset -5px -5px 10px var(--boxshadow1), 
+                    inset 5px 5px 10px var(--boxshadow2);
+    }
+}
