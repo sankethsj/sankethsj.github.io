@@ -159,11 +159,11 @@ section {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: var(--font-color);
     background-color: var(--primary-color);
     font-size: 20px;
 }
 .nav a{
+    color: var(--font-color);
     text-decoration: none;
     font-weight: 700;
     margin: 20px;
