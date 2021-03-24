@@ -1,0 +1,67 @@
+#list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    text-align: center;
+}
+h1 a:link,h1 a:visited{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.anime-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 220px;
+    height: 340px;
+    padding: 20px;
+    margin: 20px 20px;
+    border-radius: 10px;
+    box-shadow: -10px -10px 20px var(--boxshadow1), 10px 10px 20px var(--boxshadow2);
+    transition: 0.3s ease-in-out;
+}
+.anime-box img{
+    width: 200px;
+    height: 280px;
+    object-fit: cover;
+}
+.anime-box a,.anime-box a:link,.anime-box a:visited{
+    padding: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--font-color);
+}
+.anime-box:hover{
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 768px) {
+    .anime-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 180px;
+        height: 280px;
+        padding: 10px;
+        margin: 10px 10px;
+        border-radius: 10px;
+        box-shadow: -10px -10px 20px var(--boxshadow1), 10px 10px 20px var(--boxshadow2);
+        transition: 0.3s ease-in-out;
+    }
+    .anime-box img{
+        width: 160px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .anime-box a{
+        font-size: 8px;
+    }
+}
