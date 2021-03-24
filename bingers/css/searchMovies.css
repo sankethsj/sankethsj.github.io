@@ -162,6 +162,9 @@ section {
     background-color: var(--primary-color);
     font-size: 20px;
 }
+.nav a:link,a:visited{
+    color: var(--bg-color);
+}
 .nav a{
     color: var(--font-color);
     text-decoration: none;
@@ -235,8 +238,11 @@ section {
         background-color: var(--primary-color);
         font-size: 8px;
     }
+    .nav a:link,a:visited{
+        color: var(--bg-color);
+    }
     .nav a{
-        color: var(--font-color);
+        color: var(--bg-color);
         text-decoration: none;
         font-weight: 700;
         margin: 20px;
