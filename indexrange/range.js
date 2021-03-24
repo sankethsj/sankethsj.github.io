@@ -1,7 +1,10 @@
 
-var option = document.getElementById('index').value;
-
-function changeoi(that){
+function changeoi(that) {
+    if (that.value == 'niftyoichange') {
+        localStorage.setItem('index','niftyoichange');
+    } else if(that.value == 'bankniftyoichange'){
+        localStorage.setItem('index','bankniftyoichange');
+    }
     runoi(that.value);
 }
 
@@ -57,6 +60,13 @@ function runoi(option) {
         })
         .catch(err => { throw err });
 }
+
+var option = localStorage.getItem('index');
+if(!option){
+    localStorage.setItem('index','niftyoichange');
+    var option = localStorage.getItem('index');
+}
+document.getElementById('index').value = option;
 runoi(option);
 
 
