@@ -18,7 +18,7 @@ function handledata(out){
         let description = arr[i].description;
         let tempdesc = description.slice(0,100)+'...';
         let time = arr[i].publishDate;
-        let temptime = 'At: '+time.slice(11,16)+' ['+time.slice(0,10)+']';
+        let temptime = '&#8986; '+time.slice(11,16)+' ['+time.slice(0,10)+']';
         let temp = `<div class="newscard">
                     <img src="${arr[i].imageUrl}">
                     <div class="desc">
