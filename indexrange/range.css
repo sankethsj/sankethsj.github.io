@@ -161,4 +161,7 @@ th {
         background-color: var(--bg-bolor);
         color: var(--primary-color);
     }
+    .newscard:hover{
+        transform: none;
+    }
   }
