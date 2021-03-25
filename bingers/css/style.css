@@ -10,6 +10,7 @@
     --lg2: rgba(219,219,219,1);
     --call: rgb(0, 140, 0);
     --put: rgb(140, 0, 0);
+    --time: rgb(140, 140, 140);
 }
 
 [data-theme="dark"] {

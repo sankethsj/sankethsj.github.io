@@ -25,44 +25,58 @@
             </label>
             <em>Enable Dark Mode!</em>
         </div>
+        <button id="pageshare" 
+        value="sankethsj.github.io/indexrange/range.html"
+        onclick="sharing(event);">
+        Share this page
+        </button>
     </div>
 
-    <div class="container">
-        <select name="index" id="index" onchange="changeoi(this);">
-            <option value="niftyoichange" selected>NIFTY</option>
-            <option value="bankniftyoichange">BANKNIFTY</option>
-        </select>
-        
-        <div class="box1">
-            <div class="ce">
-                <h2>Total Call OI: </h2>
-                <h2 id="totalce"></h2>
+    <div class="api-container">
+
+        <div class="option-chain">
+            <div class="container">
+                <select name="index" id="index" onchange="changeoi(this);">
+                    <option value="niftyoichange" selected>NIFTY</option>
+                    <option value="bankniftyoichange">BANKNIFTY</option>
+                </select>
+
+                <div class="box1">
+                    <div class="ce">
+                        <h2>Total Call OI: </h2>
+                        <h2 id="totalce"></h2>
+                    </div>
+                    <div class="pe">
+                        <h2>Total Put OI: </h2>
+                        <h2 id="totalpe"></h2>
+                    </div>
+                    <div class="diff">
+                        <h2>Difference OI: </h2>
+                        <h2 id="diffoi"></h2>
+                    </div>
+                </div>
             </div>
-            <div class="pe">
-                <h2>Total Put OI: </h2>
-                <h2 id="totalpe"></h2>
+
+            <div id="oidata">
+                Option Chain(Strikes near to ATM only)
             </div>
-            <div class="diff">
-                <h2>Difference OI: </h2>
-                <h2 id="diffoi"></h2>
+            <div id="showData">
             </div>
         </div>
+        <div id="newsfeed">
+            <h2>Newsfeed</h2>
+        </div>
     </div>
-
-    <div id="oidata">
-        Option Chain(Strikes near to ATM only)
-    </div>
-    <div id="showData">
-    </div>
-
+      
 
     <div class="footer">
         <p>Copyright 2021. All Rights Reserved. Design by <a href="/index.html">Sanketh Jain</a></p>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="range.js"></script>
-    <script src="/bingers/js/darkMode.js"></script>
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="range.js"></script>
+<script src="/bingers/js/darkMode.js"></script>
+<script src="/indexrange/feed.js"></script>
 
 </html>
