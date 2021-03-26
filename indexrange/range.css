@@ -207,7 +207,7 @@ th {
         cursor: pointer;
         padding: 4px;
         margin: 10px 2px;
-        font-size: 10px;
+        font-size: 16px;
         background-color: var(--primary-color);
         color: var(--bg-color);
         font-weight: 700;
@@ -219,7 +219,7 @@ th {
         cursor: pointer;
         padding: 4px;
         margin: 10px 2px;
-        font-size: 10px;
+        font-size: 16px;
         background-color: var(--primary-color);
         color: var(--bg-color);
         font-weight: 700;
