@@ -206,7 +206,7 @@ th {
     #pageshare{
         z-index: 1;
         position: fixed;
-        bottom: 60px;
+        bottom: 80px;
         right: 60px;
         cursor: pointer;
         padding: 4px;
@@ -222,7 +222,7 @@ th {
     #pagerefresh{
         z-index: 1;
         position: fixed;
-        bottom: 20px;
+        bottom: 100px;
         right: 60px;
         cursor: pointer;
         padding: 4px;
