@@ -207,7 +207,7 @@ th {
         z-index: 1;
         position: fixed;
         bottom: 60px;
-        right: 20px;
+        right: 60px;
         cursor: pointer;
         padding: 4px;
         margin: 10px 2px;
@@ -223,7 +223,7 @@ th {
         z-index: 1;
         position: fixed;
         bottom: 20px;
-        right: 20px;
+        right: 60px;
         cursor: pointer;
         padding: 4px;
         margin: 10px 2px;
