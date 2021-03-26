@@ -24,7 +24,7 @@ function handledata(out){
                     <div class="desc">
                         <a href="${arr[i].url}" target="_blank">${arr[i].title}</a>
                         <p id="description">${tempdesc}</p>
-                        <p id="time">${temptime}<button id="share" value="${arr[i].url}" onclick="sharing(event)">Share &#x21b7;</button></p>
+                        <p id="time">${temptime}<button id="share" value="${arr[i].source}: ${arr[i].url}" onclick="sharing(event)">Share &#x21b7;</button></p>
                     </div>
                     </div>`
         newsfeed.insertAdjacentHTML('beforeend',temp);
@@ -39,3 +39,4 @@ const url = 'https://api.niftytrader.in/api/Resources/GetRssFeedDataHome';
             handledata(out);
         })
         .catch(err => { throw err });
+
