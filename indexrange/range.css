@@ -204,6 +204,10 @@ th {
         font-size: 14px;
     }
     #pageshare{
+        z-index: 1;
+        position: fixed;
+        bottom: 60px;
+        right: 20px;
         cursor: pointer;
         padding: 4px;
         margin: 10px 2px;
@@ -216,6 +220,10 @@ th {
         border-radius: 20px;
     }
     #pagerefresh{
+        z-index: 1;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
         cursor: pointer;
         padding: 4px;
         margin: 10px 2px;
