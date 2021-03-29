@@ -354,6 +354,7 @@ body {
         position: relative;
     }
     .fa-times{
+        font-size: 30px;
         position: absolute;
         right: 20px;
         top: 20px;
@@ -366,6 +367,7 @@ body {
     .mobileNav ul li{
         text-align: center;
         height: 60px;
+        margin: 40px;
     }
     .mobileNav ul li a,.mobileNav ul li a:link,.mobileNav ul li a:visited{
         text-decoration: none;
