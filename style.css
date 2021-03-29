@@ -334,6 +334,7 @@ body {
     }
     .close .fa{
         align-self: center;
+        color: var(--font);
         display: block;
         margin-right: 10px;
     }

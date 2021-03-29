@@ -5,46 +5,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script data-ad-client="ca-pub-9261038294033166" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="/bingers/css/profile.css">
-    <link rel="icon" href="./assets/favicon.jpg" type="image/jpg" sizes="16x16">
-    <link rel="stylesheet" href="/bingers/css/style.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Profile - Sanketh Jain</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 
 <body>
-    <div class="header">
-        <div class="head">Sanketh<span>Jain</span><a href="/Portfolio/index.html">Port</a></div>
 
-        <div class="theme-switch-wrapper">
-            <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox" />
-                <div class="slider round"></div>
-            </label>
-            <p><em>Dark Mode! </em>&#127769;</p>
+    <div class="header">
+        <div class="title">SJ</div>
+        <div class="bar">
+            <div class="nav">
+                <ul>
+                    <li><a href="#" rel="noopener noreferrer">home</a></li>
+                    <li><a href="#footer" rel="noopener noreferrer">about</a></li>
+                    <li><a href="#contact" rel="noopener noreferrer">contact</a></li>
+                    <li><a href="#projects" rel="noopener noreferrer">projects</a></li>
+                </ul>
+            </div>
+            <img id="dark-mode" src="/Portfolio/assets/dark-mode.svg" alt="uxwing.com" onclick="switchTheme();">
+            <i class="fa fa-bars" aria-hidden="true" onclick="openNav(event);"></i>
         </div>
     </div>
 
-    <h1>Checkout my Projects &#128218;</h1>
-
-    <div class="projects">
-        <div class="project p1"><a href="/bingers/home.html">Movies Archive</a></div>
-        <div class="project p2"><a href="/sipCalculator/sip.html">SIP Calculator</a></div>
-        <div class="project p3"><a href="/neumorphic/index.html">Neumorphic Design</a></div>
-        <div class="project p4"><a href="/indexrange/range.html">Index Open Interest</a></div>
-        <div class="project p5"><a href="/illustrations/designs.html">Illustrations</a></div>
-        <div class="project p6"><a href="/anime/anime.html">Top Anime</a></div>
+    <div id="mobileNav" class="mobileNav">
+        <div id="close" class="close">
+            <i class="fa fa-times" aria-hidden="true" onclick="closeNav(event);"></i>
+        </div>
+        <ul>
+            <li><a href="#" rel="noopener noreferrer">home</a></li>
+            <li><a href="#footer" rel="noopener noreferrer">about</a></li>
+            <li><a href="#contact" rel="noopener noreferrer">contact</a></li>
+            <li><a href="#projects" rel="noopener noreferrer">projects</a></li>
+        </ul>
     </div>
 
+    <div id="container" class="container">
+        <div class="intro">
+            <div class="im">Hi, I'm</div>
+            <div class="name">Sanketh Jain.</div>
+            <div class="desc">Coding to Learn.</div>
+            <a id="cta" href="#projects" rel="noopener noreferrer">PROJECTS</a>
+        </div>
+        <img id="svg" src="/Portfolio/assets/bg.png" alt="Sanketh Jain">
+    </div>
 
-    <div class="socials">
-        <h1>four ways to say hi! &#128075;</h1>
+    <div id="projects">
+        <div class="heading">Checkout my Projects &#128218;</div>
+        <ul class="cards">
+            <li><a href="/bingers/movies.html">Movies Archive</a></li>
+            <li><a href="/indexrange/range.html">Index Open Interest</a></li>
+            <li><a href="/sipCalculator/sip.html">SIP Calculator</a></li>
+            <li><a href="/anime/anime.html">Top Anime</a></li>
+            <li><a href="/neumorphic/index.html">Neumorphic Design</a></li>
+            <li><a href="/illustrations/designs.html">Illustrations</a></li>
+        </ul>
+    </div>
+
+    <div id="contact">
+        <div class="heading">four ways to say hi! &#128075;</div>
         <div class="media">
-            <a href="instagram.com/sankethjain_" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://github.com/sankethsj" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
             <a href="https://twitter.com/sankethjain_" target="_blank"><i class="fa fa-twitter"
                     aria-hidden="true"></i></a>
             <a href="https://www.linkedin.com/in/sankethjain/" target="_blank"><i class="fa fa-linkedin-square"
@@ -54,11 +77,31 @@
         </div>
     </div>
 
-    <div class="footer">
-        <p>Copyright 2021. All Rights Reserved. Design by <a href="/index.html">Sanketh Jain &#128081;</a></p>
+    <div id="footer">
+        <div class="wrap">
+            <div class="f1">
+                <h3>Sanketh Jain &#128081;</h3>
+                <p>&#129302; Mechatronics Engineer</p>
+                <p>&#128187; Coding enthusiast.</p>
+                <p>&#128205; Mangalore, Karnataka.</p>
+                <p id="time"></p>
+            </div>
+            <ul class="foo">
+                <li><a href="#" rel="noopener noreferrer">/home</a></li>
+                <li><a href="#footer" rel="noopener noreferrer">/about</a></li>
+                <li><a href="#contact" rel="noopener noreferrer">/contact</a></li>
+                <li><a href="#projects" rel="noopener noreferrer">/projects</a></li>
+            </ul>
+            <img id="profilepic" src="/Portfolio/assets/profile.svg" alt="undraw.co">
+        </div>
+        
+        <div class="f2">
+            <footer> <small>&copy; Copyright 2021. Sanketh Jain</small> </footer>
+        </div>
     </div>
-
 </body>
-<script src="/bingers/js/darkMode.js"></script>
+
+<script src="/Portfolio/js/darkmode.js"></script>
+<script src="/Portfolio/js/scroll.js"></script>
 
 </html>
