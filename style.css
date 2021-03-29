@@ -354,6 +354,7 @@ body {
         position: relative;
     }
     .fa-times{
+        cursor: pointer;
         font-size: 30px;
         position: absolute;
         right: 20px;
