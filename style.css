@@ -11,9 +11,9 @@
     --bg: rgba(0, 0, 0, 1);
     --font: rgb(211, 211, 211);
     --primary: #9BF2CA;
-    --card: rgba(0, 0, 0, 1);
-    --shadow1: #28343f;
-    --shadow2: #3c4e5f;
+    --card: rgb(0, 0, 0);
+    --shadow1: #111111;
+    --shadow2: #111111;
     --footer: rgb(37, 37, 37);
 }
 
