@@ -1,6 +1,15 @@
 {
     "projects": [
         {
+            "id": "6",
+            "name": "Zack Snyder's Justice League (English, 2021)",
+            "genre": "Action-Sci-Fi",
+            "imdb": "8.2",
+            "url": "https://image.tmdb.org/t/p/w500/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg",
+            "summary": "Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.",
+            "link": "#"
+        },
+        {
             "id": "1",
             "name": "Drishyam 2 (Malayalam, 2021)",
             "genre": "Drama-Thriller",
