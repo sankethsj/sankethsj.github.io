@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/indexrange/charts/chart.css">
     <title>Sanketh Jain - Index OI Data</title>
 </head>
 
@@ -45,6 +46,16 @@
         </div>
     </div>
 
+    <div class="chart">
+        <div>
+            <button id="show" onclick="showChart(event);">Show Chart</button>
+            <button id="hide" onclick="hideChart(event);">Hide Chart</button>
+        </div>
+        <div id="ccontainer">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+
     <div class="api-container">
 
         <div class="option-chain">
@@ -66,6 +77,10 @@
                     <div class="diff">
                         <h2>Difference OI: </h2>
                         <h2 id="diffoi"></h2>
+                    </div>
+                    <div class="signal">
+                        <h2 id="signal"></h2>
+                        <i class="fa fa-info-circle" aria-hidden="true"><span class="tooltiptext">Do not use this to make investment decisions.</span></i>
                     </div>
                 </div>
 
@@ -105,5 +120,6 @@
 <script src="/indexrange/range.js"></script>
 <script src="/bingers/js/darkMode.js"></script>
 <script src="/indexrange/feed.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+<script src="/indexrange/charts/chart.js"></script>
 </html>

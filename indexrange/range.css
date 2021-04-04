@@ -1,12 +1,12 @@
 body{
     color: var(--font-color);
+    width: vw;
 }
 .api-container{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: -30px;
 }
 .option-chain{
     display: flex;
@@ -28,7 +28,7 @@ body{
 #index{
     width: 160px;
     height: 60px;
-    padding: 10px;
+    padding: 0 10px;
     font-size: 20px;
     font-weight: 700;
     color: var(--bg-color);
@@ -36,9 +36,12 @@ body{
     outline: none;
     border: none;
     border-radius: 40px;
-    margin: 40px auto;
+    margin: 20px auto;
 }
 .box1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 400px;
     padding: 10px;
     margin: 10px 10px;
@@ -73,9 +76,70 @@ body{
     margin: 0 10px;
 }
 
-.ce,.pe, .diff{
+.ce,.pe, .diff, .signal{
     display: flex;
 }
+.signal{
+    align-self: center;
+    align-items: center;
+    flex-direction: row;
+}
+#signal{
+    font-size: 30px;
+    color: var(--font-color);
+}
+
+/* Tooltip container */
+.fa-info-circle {
+    color: #555;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .fa-info-circle .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+  
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+  
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  /* Tooltip arrow */
+  .fa-info-circle .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  .fa-info-circle:hover{
+      color: var(--font-color);
+  }
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .fa-info-circle:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
 #diffoi{
     color: var(--primary-color);
 }
@@ -102,8 +166,14 @@ th {
 }
 
 #newsfeed{
+    overflow: scroll;
     width: 400px;
+    height: 100vh;
+    padding: 20px;
     margin-top: 20px;
+}
+#newsfeed::-webkit-scrollbar {
+    display: none;
 }
 .newscard{
     display: flex;
@@ -114,9 +184,7 @@ th {
     box-shadow: -10px -10px 20px var(--boxshadow1), 10px 10px 20px var(--boxshadow2);
     transition: 0.3s ease-in-out;
 }
-.newscard:hover{
-    transform: scale(1.1);
-}
+
 .newscard img{
     width: 180px;
     height: 100px;

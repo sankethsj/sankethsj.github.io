@@ -1,0 +1,25 @@
+#show,#hide{
+    cursor: pointer;
+    margin: 4px;
+    padding: 8px;
+    font-size: 14px;
+    outline: none;
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    background-color: var(--bg-bolor);
+    color: var(--primary-color);
+}
+#ccontainer{
+    position: relative; 
+    height:80vh; 
+    width:80vw
+}
+
+
+@media only screen and (max-width: 768px) {
+    #ccontainer{
+        position: relative;
+        width: 90vw;
+        height: 80vh;
+    }
+}
