@@ -56,7 +56,7 @@ function runoi(option) {
                 putoi[i] = arr[i].puts_change_oi
             }
             var myChart = new Chart(ctx, {
-                type: 'line',
+                type: 'bar',
                 data: {
                     labels: strike,
                     datasets: [{
