@@ -84,37 +84,16 @@ function runoi(option) {
             });
 
 
-
-            var table = document.createElement('table');
-            const list = out.resultData.data;
-            var col = [];
-            for (var i = 0; i < list.length; i++) {
-                for (var key in list[i]) {
-                    if (col.indexOf(key) === -1) {
-                        col.push(key);
-                    }
-                }
-            }
-
-            var tr = table.insertRow(-1);
-            for (var i = 0; i < col.length; i++) {
-                var th = document.createElement("th");
-                th.innerHTML = col[i];
-                tr.appendChild(th);
-            }
-            for (var i = 0; i < list.length; i++) {
-
-                tr = table.insertRow(-1);
-
-                for (var j = 0; j < col.length; j++) {
-                    var tabCell = tr.insertCell(-1);
-                    tabCell.innerHTML = list[i][col[j]];
-                }
-            }
-
-            var divShowData = document.getElementById('showData');
-            divShowData.innerHTML = "";
-            divShowData.appendChild(table);
+            let oichain = out.resultData.data;
+            const table = document.getElementById('oirows');
+            table.innerText = '';
+            oichain.forEach(oi => {
+                var temp = `<tr>
+                <td>${oi.calls_change_oi}</td>
+                <td>${oi.strike_price}</td>
+                <td>${oi.puts_change_oi}</td></tr>`;
+                table.insertAdjacentHTML('beforeend', temp);
+    });
         })
         .catch(err => { throw err });
 }
@@ -137,4 +116,35 @@ function showChart(e){
 function hideChart(e){
     e.preventDefault();
     document.getElementById('ccontainer').style.display = 'none';
+}
+
+const menu = document.getElementById('menu');
+const close = document.getElementById('close');
+const nav = document.getElementById('navtabs');
+menu.addEventListener('click',()=>{
+    nav.style.display='block';
+    menu.style.display='none';
+    close.style.display='block';
+})
+close.addEventListener('click',()=>{
+    nav.style.display='none';
+    close.style.display='none';
+    menu.style.display='block';
+})
+
+// Get the modal
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("placead");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
