@@ -1,7 +1,7 @@
 :root{
     --bg: rgba(255, 255, 255, 1);
     --font: rgba(0, 0, 0, 1);
-    --primary: #F20C60;
+    --primary: rgb(206, 0, 51);
     --card: rgb(255,255,255);
     --shadow1: rgb(226, 226, 226);
     --shadow2: rgb(226, 226, 226);
@@ -9,8 +9,8 @@
 }
 [data-theme="dark"] {
     --bg: rgba(0, 0, 0, 1);
-    --font: rgb(211, 211, 211);
-    --primary: #9BF2CA;
+    --font: rgb(231, 231, 231);
+    --primary: rgb(0, 214, 203);
     --card: rgb(0, 0, 0);
     --shadow1: #111111;
     --shadow2: #111111;
@@ -31,7 +31,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Rubik';
+    font-family: 'Poppins';
     -ms-overflow-style: none;
     scrollbar-width: none;
     background-color: var(--bg);
@@ -68,6 +68,13 @@ body {
     list-style: none;
     margin: 0 20px;
     font-size: 20px;
+    transition: all 0.2s;
+}
+.nav li:hover{
+    transform: scale(1.1);
+}
+.nav li:active{
+    transform: scale(0.95);
 }
 .nav ul li a, .nav ul li a:link,.nav ul li a:visited{
     text-decoration: none;
@@ -102,37 +109,116 @@ body {
     font-size: 30px;
 }
 .container{
-    margin-top: 100px;
-    margin-bottom: 100px;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 40px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    padding: 10px 40px;
     color: var(--font);
 }
 .intro{
-    margin-top: -100px;
-}
-.im{
-    margin-top: 100px;
-    margin-left: 100px;
     font-size: 40px;
-    font-weight: 300;
 }
 .name{
-    font-size: 80px;
-    margin-left: 100px;
-    font-weight: 700;
+    margin-left: 25px;
 }
-.desc{
-    margin-left: 100px;
+.im,.desc{
+    margin-left: 30px;
 }
+#poppins {
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    animation: colorFill 3s ease forwards 6.0s;
+  }
+  
+  #poppins path:nth-child(1) {
+      stroke-dasharray: 449px;
+      stroke-dashoffset: 449px;
+      animation: animateText 2s ease forwards;
+  }
+  
+  #poppins path:nth-child(2) {
+      stroke-dasharray: 565;
+      stroke-dashoffset: 565px;
+      animation: animateText 2s ease forwards 0.5s;
+  }
+  
+  #poppins path:nth-child(3) {
+      stroke-dasharray: 449px;
+      stroke-dashoffset: 449px;
+      animation: animateText 3s ease forwards 0.7s;
+  }
+  
+  #poppins path:nth-child(4) {
+      stroke-dasharray: 449px;
+      stroke-dashoffset: 449px;
+      animation: animateText 3s ease forwards 0.9s;
+  }
+  
+  #poppins path:nth-child(5) {
+      stroke-dasharray: 449px;
+      stroke-dashoffset: 449px;
+      animation: animateText 4s ease forwards 1.3s;
+  }
+  
+  #poppins path:nth-child(6) {
+      stroke-dasharray: 605px;
+      stroke-dashoffset: 605px;
+      animation: animateText 4s ease forwards 1.5s;
+      
+  }
+  
+  #poppins path:nth-child(7) {
+      stroke-dasharray: 494px;
+      stroke-dashoffset: 494px;
+      animation: animateText 5s ease forwards 2s;
+  }
+  #poppins path:nth-child(8) {
+      stroke-dasharray: 494px;
+      stroke-dashoffset: 494px;
+      animation: animateText 5s ease forwards 2.3s;
+  }
+  #poppins path:nth-child(9) {
+      stroke-dasharray: 494px;
+      stroke-dashoffset: 494px;
+      animation: animateText 6s ease forwards 2.5s;
+  }
+  #poppins path:nth-child(10) {
+      stroke-dasharray: 494px;
+      stroke-dashoffset: 494px;
+      animation: animateText 6s ease forwards 2.8s;
+  }
+  #poppins path:nth-child(11) {
+      stroke-dasharray: 494px;
+      stroke-dashoffset: 494px;
+      animation: animateText 7s ease forwards 3.1s;
+  }
+  #poppins path:nth-child(12) {
+      stroke-dasharray: 494px;
+      stroke-dashoffset: 494px;
+      animation: animateText 7s ease forwards 5s;
+  }
+  @keyframes animateText {
+      to {
+          stroke-dashoffset: 0;
+      }
+  }
+  
+  @keyframes colorFill {
+      from {
+          fill: transparent;
+          text-decoration: none;
+      }
+      to {
+          fill: var(--font);
+      }
+  }
 
 #svg{
-    top: 10px;
-    right: 20px;
-    width: 45vw;
+    width: 40%;
 }
 #mobileNav{
     display: none;
@@ -176,19 +262,55 @@ body {
     border-radius: 4px;
     margin: 20px 20px;
 }
-.cards li:hover{
-    box-shadow: 10px 10px 20px var(--shadow1),
-                -10px -10px 20px var(--shadow2);
-}
 .cards li a,.cards li a:link,.cards li a:visited{
     color: var(--font);
     font-size: 30px;
     text-decoration: none;
     text-align: center;
     font-weight: 500;
+    transition: all 0.3s ease-in-out;
 }
 .cards li a:hover{
     color: var(--primary);
+}
+.cards li:active{
+    transform: scale(0.95);
+}
+#about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: 20px 40px;
+}
+#about ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#about ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+#about ul li i{
+    font-size: 80px;
+}
+#about ul li:hover{
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px var(--shadow1), -2px -2px 4px var(--shadow2);
+    transform: scale(1.2);
+}
+.devicon-visualstudio-plain{
+    color: #0e76a8;
 }
 #contact{
     color: var(--font);
@@ -286,13 +408,20 @@ body {
     width: 300px;
 }
 @media only screen and (max-width: 768px) {
+    .header{
+        width: 100vw;
+    }
     .container{
+        width: 100vw;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin:0;
         margin-top: -60px;
         height: 120vh;
+    }
+    .name svg{
+        stroke-width: 1px;
+        width: 85vw;
     }
     .title{
         margin-left: 10px;
@@ -328,6 +457,10 @@ body {
         background-color: var(--font);
         box-shadow: 4px 4px 10px var(--shadow1),
                 -4px -4px 10px var(--shadow2);
+        transition: all 0.3s;
+    }
+    #cta:active{
+        transform: scale(0.95);
     }
     #svg{
         display: none;
