@@ -3,8 +3,8 @@
     --font: rgba(0, 0, 0, 1);
     --primary: rgb(206, 0, 51);
     --card: rgb(255,255,255);
-    --shadow1: rgb(226, 226, 226);
-    --shadow2: rgb(226, 226, 226);
+    --shadow1: rgb(207, 207, 207);
+    --shadow2: rgb(207, 207, 207);
     --footer: rgb(231, 231, 231); 
 }
 [data-theme="dark"] {
@@ -47,7 +47,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: var(--bg);
-    border-bottom: 1px solid rgb(139, 139, 139);
+    box-shadow: 4px 4px 10px var(--shadow1);
 }
 .title{
     cursor: default;
@@ -121,16 +121,14 @@ body {
 .intro{
     font-size: 40px;
 }
-.name{
-    margin-left: 25px;
-}
-.im,.desc{
+
+.im,.desc,.name{
     margin-left: 30px;
 }
 
 .ml15 {
     font-weight: 800;
-    font-size: 1em;
+    font-size: 1.3em;
     text-transform: uppercase;
     letter-spacing: 0.3em;
 }
@@ -139,6 +137,17 @@ body {
     display: inline-block;
     line-height: 1em;
 } 
+.ml16 {
+    color: var(--font);
+    font-weight: 800;
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+  
+.ml16 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
 
 #svg{
     width: 40%;
@@ -174,7 +183,7 @@ body {
     align-items: center;
 }
 .cards li{
-    width: 300px;
+    width: 340px;
     height: 180px;
     display: flex;
     justify-content: center;
@@ -331,6 +340,16 @@ body {
 #profilepic{
     width: 300px;
 }
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ml3 {
+    margin-left: 0.4rem;
+    font-size: 0.9rem;
+}
+
 @media only screen and (max-width: 768px) {
     .header{
         width: 100vw;
@@ -343,12 +362,33 @@ body {
         margin-top: -60px;
         height: 120vh;
     }
-    .name svg{
-        stroke-width: 1px;
-        width: 85vw;
-    }
+    
     .title{
         margin-left: 10px;
+    }
+    .im{
+        font-size: 1.5rem;
+    }
+    .ml15 {
+        font-weight: 800;
+        font-size: 1em;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+    }
+    
+    .ml15 .word {
+        display: inline-block;
+        line-height: 1em;
+    } 
+    .ml16 {
+        color: var(--font);
+        font-size: 1.5rem;
+        overflow: hidden;
+    }
+      
+    .ml16 .letter {
+        display: inline-block;
+        line-height: 1em;
     }
     .bar .fa{
         display: block;
@@ -356,9 +396,6 @@ body {
     }
     #dark-mode{
         margin-right: 20px;
-    }
-    .im,.name,.desc{
-        margin-left: 0px;
     }
     @keyframes slide{
         0% {top:100vh;}
@@ -373,6 +410,7 @@ body {
         margin-top: 100px;
         width: fit-content;
         padding: 10px;
+        margin-left: 30px;
         text-decoration: none;
         border: 2px solid var(--font);
         border-radius: 5px;
@@ -434,7 +472,27 @@ body {
         border-bottom: 1px solid var(--font);
     }
     .heading{
-        font-size: 28px;
+        font-size: 1.5rem;
         font-weight: 700;
+    }
+    .cards li{
+        width: 320px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--card);
+        box-shadow: 4px 4px 10px var(--shadow1),
+                    -4px -4px 10px var(--shadow2);
+        border-radius: 4px;
+        margin: 20px 20px;
+    }
+    .cards li a,.cards li a:link,.cards li a:visited{
+        color: var(--font);
+        font-size: 1.4rem;
+        text-decoration: none;
+        text-align: center;
+        font-weight: 500;
+        transition: all 0.3s ease-in-out;
     }
   }
