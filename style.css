@@ -52,8 +52,8 @@ body {
 .title{
     cursor: default;
     color: var(--font);
-    font-weight: 700;
     font-size: 40px;
+    font-weight: 900;
     margin-left: 40px;
 }
 .nav ul{
@@ -127,95 +127,18 @@ body {
 .im,.desc{
     margin-left: 30px;
 }
-#poppins {
-    position:absolute;
-    left: 50%;
-    top: 50%;
-    animation: colorFill 3s ease forwards 6.0s;
-  }
-  
-  #poppins path:nth-child(1) {
-      stroke-dasharray: 449px;
-      stroke-dashoffset: 449px;
-      animation: animateText 2s ease forwards;
-  }
-  
-  #poppins path:nth-child(2) {
-      stroke-dasharray: 565;
-      stroke-dashoffset: 565px;
-      animation: animateText 2s ease forwards 0.5s;
-  }
-  
-  #poppins path:nth-child(3) {
-      stroke-dasharray: 449px;
-      stroke-dashoffset: 449px;
-      animation: animateText 3s ease forwards 0.7s;
-  }
-  
-  #poppins path:nth-child(4) {
-      stroke-dasharray: 449px;
-      stroke-dashoffset: 449px;
-      animation: animateText 3s ease forwards 0.9s;
-  }
-  
-  #poppins path:nth-child(5) {
-      stroke-dasharray: 449px;
-      stroke-dashoffset: 449px;
-      animation: animateText 4s ease forwards 1.3s;
-  }
-  
-  #poppins path:nth-child(6) {
-      stroke-dasharray: 605px;
-      stroke-dashoffset: 605px;
-      animation: animateText 4s ease forwards 1.5s;
-      
-  }
-  
-  #poppins path:nth-child(7) {
-      stroke-dasharray: 494px;
-      stroke-dashoffset: 494px;
-      animation: animateText 5s ease forwards 2s;
-  }
-  #poppins path:nth-child(8) {
-      stroke-dasharray: 494px;
-      stroke-dashoffset: 494px;
-      animation: animateText 5s ease forwards 2.3s;
-  }
-  #poppins path:nth-child(9) {
-      stroke-dasharray: 494px;
-      stroke-dashoffset: 494px;
-      animation: animateText 6s ease forwards 2.5s;
-  }
-  #poppins path:nth-child(10) {
-      stroke-dasharray: 494px;
-      stroke-dashoffset: 494px;
-      animation: animateText 6s ease forwards 2.8s;
-  }
-  #poppins path:nth-child(11) {
-      stroke-dasharray: 494px;
-      stroke-dashoffset: 494px;
-      animation: animateText 7s ease forwards 3.1s;
-  }
-  #poppins path:nth-child(12) {
-      stroke-dasharray: 494px;
-      stroke-dashoffset: 494px;
-      animation: animateText 7s ease forwards 5s;
-  }
-  @keyframes animateText {
-      to {
-          stroke-dashoffset: 0;
-      }
-  }
-  
-  @keyframes colorFill {
-      from {
-          fill: transparent;
-          text-decoration: none;
-      }
-      to {
-          fill: var(--font);
-      }
-  }
+
+.ml15 {
+    font-weight: 800;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+}
+
+.ml15 .word {
+    display: inline-block;
+    line-height: 1em;
+} 
 
 #svg{
     width: 40%;
@@ -283,6 +206,7 @@ body {
     align-items: center;
     width: 100vw;
     margin: 20px 40px;
+    color: var(--font);
 }
 #about ul{
     list-style: none;
