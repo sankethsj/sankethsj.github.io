@@ -21,7 +21,7 @@
     --heading-color: #292922;
     --boxshadow1: #1f1f1f;
     --boxshadow2: #000000;
-    --lg1: rgba(15,15,15,0);
+    --lg1: rgb(48, 48, 48);
     --lg2: rgba(15,15,15,1);
     --call: rgb(82, 255, 82);
     --put: rgb(255, 82, 82);
@@ -131,7 +131,7 @@ a:visited {
     transform: scale(1.1);
 }
 .theme-switch-wrapper {
-    margin-top: -20px;
+    margin-top: 0px;
     display: flex;
     align-items: center;
 }
