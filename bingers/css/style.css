@@ -260,7 +260,7 @@ input:checked+.slider:before {
         font-size: 1.8rem;
     }
     .theme-switch-wrapper {
-        margin-top: -20px;
+        margin-top: 0px;
         display: flex;
         align-items: center;
     } 
