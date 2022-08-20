@@ -1,0 +1,112 @@
+:root{
+    --logo-color: rgb(121, 121, 121);
+    --button-color: rgb(32, 32, 32);
+    --button-shadow: rgb(179, 41, 41);
+    --outline-color: rgb(66, 66, 66);
+    --border-radius: 40px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--button-color);
+}
+.border{
+    position: absolute;
+    width: 360px;
+    height: 300px;
+    border-radius: var(--border-radius);
+    outline: 8px solid var(--outline-color);
+    background-color: var(--border-shadow);
+    z-index: 1;
+}
+
+.windows{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+    height: 300px;
+    background-color: var(--button-color);
+    border-radius: var(--border-radius);
+    box-shadow:  0px -10px 55px -15px #353535,
+                10px 20px 55px 10px rgba(0, 0, 0, 1);
+    transition: .12s ease-in-out;
+    transform: translate3d(0, -20px, 0);
+    z-index: 10;
+}
+
+.windows:active{
+    transform: translate3d(0, 0, 0);
+    box-shadow: none;
+}
+
+/* .windows:hover + .border{
+    animation: colorchanger 15s infinite;
+} */
+
+.tile{
+    margin: 2px;
+}
+
+.row1{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+
+.t1{
+    width: 0;
+    height: 40px;
+    border-right: 40px solid var(--logo-color);
+    border-top: 6px solid transparent;
+}
+.t2{
+    width: 0;
+    height: 48px;
+    border-right: 50px solid var(--logo-color);
+    border-top: 8px solid transparent;
+}
+
+.row2{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.t3{
+    width: 0;
+    height: 40px;
+    border-right: 40px solid var(--logo-color);
+    border-bottom: 6px solid transparent;
+}
+.t4{
+    width: 0;
+    height: 49px;
+    border-right: 50px solid var(--logo-color);
+    border-bottom: 8px solid transparent;
+}
+
+@keyframes colorchanger {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: red;}
+  }
+
