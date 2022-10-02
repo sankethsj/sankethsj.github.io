@@ -39,5 +39,5 @@ ipaddress.addEventListener('click', () => {
 
     setTimeout(() => {
         toast.classList.remove("toast-show");
-    }, 3000);
+    }, 2700);
 })
