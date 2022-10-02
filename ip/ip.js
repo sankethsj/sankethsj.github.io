@@ -25,10 +25,10 @@ fetch(URL).then(
     (res) => {
         my_ip = res.origin
         ipaddress.innerText = my_ip;
-        let ip_numbers = my_ip.split('.');
-        ip_numbers.forEach(element => {
-            get_number_fact(element);
-        });
+        // let ip_numbers = my_ip.split('.');
+        // ip_numbers.forEach(element => {
+        //     get_number_fact(element);
+        // });
     }
 )
 
