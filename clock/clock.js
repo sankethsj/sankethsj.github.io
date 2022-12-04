@@ -118,11 +118,9 @@ setInterval(() => {
     const currentDate = new Date();
     let hour = currentDate.getHours();
     let minute = currentDate.getMinutes();
-    let hourStrng = hour.toString();
-    let minuteString = minute.toString();
-    if (minuteString.length < 2) {
-        minuteString = "0" + minuteString;
-    }
+    let hourStrng = hour.toString().padStart(2, '0');
+    let minuteString = minute.toString().padStart(2, '0');
+
     let first_digit = hourStrng.slice(0, 1)
     let second_digit = hourStrng.slice(1, 2)
     let third_digit = minuteString.slice(0, 1)

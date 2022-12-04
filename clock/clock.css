@@ -1,139 +1,170 @@
-:root{
+:root {
   --bg: rgb(224, 224, 224);
   --font: black;
-  --shadow:rgba(0, 0, 0, .25);
+  --shadow: rgba(0, 0, 0, .25);
   --link: rgb(4, 0, 226);
 }
+
 [data-theme="dark"] {
-  --bg: rgb(36, 36, 36);
+  --bg: rgb(22, 22, 22);
   --font: white;
-  --shadow:rgb(0, 0, 0);
-  --link: rgb(255,255,0);
+  --shadow: rgb(0, 0, 0);
+  --link: rgb(255, 255, 0);
 }
-html{
+
+html {
   scroll-behavior: smooth;
 }
-*{
+
+* {
   margin: 0;
   padding: 0;
 }
+
 body {
-    width: 100%;
-    font-family: Poppins;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--bg);
-    color: var(--font);
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Poppins';
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg);
+  color: var(--font);
 }
-.header{
+
+.header {
   margin: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-h1{
+
+h1 {
   text-align: center;
   font-size: 40px;
 }
-.fa-moon-o{
+
+.fa-moon-o {
   margin-left: 50px;
   color: var(--font);
   cursor: pointer;
   font-size: 30px;
 }
-.fa-moon-o:hover{
+
+.fa-moon-o:hover {
   opacity: 0.7;
 }
-.wrapper{
+
+.wrapper {
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-.hrdigits,.mindigits{
+
+.hrdigits,
+.mindigits {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.digit1,.digit2,.digit3,.digit4{
-  width: 220px;
-  display: flex;
-  flex-wrap: wrap;
+.digit1,
+.digit2,
+.digit3,
+.digit4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .clock {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    box-shadow: inset 0 1px 3px var(--shadow);
-    position: relative;
-    margin: 5px;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  box-shadow: inset 0 1px 3px var(--shadow);
+  position: relative;
+  margin: 5px;
 }
 
 .hand {
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    transform: translateX(-50%) rotate(0deg);
-    transform-origin: bottom;
-    transition: transform 10s;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  transform-origin: bottom;
+  transition: transform 10s;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
-  
+
 .hour {
-    width: 5px;
-    height: 46%;
-    background-color: var(--font);
+  width: 5px;
+  height: 46%;
+  background-color: var(--font);
 }
-  
+
 .minute {
-    width: 5px;
-    height: 46%;
-    background-color: var(--font);
+  width: 5px;
+  height: 46%;
+  background-color: var(--font);
 }
-.footer{
+
+.footer {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.footer h3{
+
+.footer h3 {
   font-size: 14px;
   margin: 20px;
 }
-.footer a,a:link,a:visited{
+
+.footer a,
+a:link,
+a:visited {
   text-decoration: none;
   margin: 10px;
   color: var(--link);
   font-size: 14px;
 }
-.footer a:hover{
+
+.footer a:hover {
   text-shadow: 1px 1px 4px red;
 }
-.footer p{
+
+.footer p {
   margin-top: 10px;
   margin-bottom: 30px;
   text-align: center;
   width: 70vw;
   font-size: 12px;
 }
+
 @media only screen and (max-width: 768px) {
-  .header h1{
+  .header h1 {
     font-size: 24px;
     margin-top: -10px;
   }
-  .wrapper{
+
+  .wrapper {
     margin-top: -10px;
     flex-direction: column;
   }
-  .digit1,.digit2,.digit3,.digit4{
+
+  .digit1,
+  .digit2,
+  .digit3,
+  .digit4 {
     width: 160px;
   }
-  .clock{
+
+  .clock {
     width: 70px;
     height: 70px;
   }
