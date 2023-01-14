@@ -157,7 +157,29 @@ body {
 }
 
 #cta{
-    display: none;
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    width: fit-content;
+    padding: 10px;
+    margin-left: 30px;
+    text-decoration: none;
+    border: 2px solid var(--font);
+    border-radius: 5px;
+    color: var(--bg);
+    font-size: 30px;
+    background-color: var(--font);
+    box-shadow: 4px 4px 10px var(--shadow1),
+            -4px -4px 10px var(--shadow2);
+    transition: all 0.3s;
+}
+
+#cta:hover{
+    transform: scale(1.05);
+}
+
+#cta:active{
+    transform: scale(0.95);
 }
 
 #projects{
