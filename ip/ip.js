@@ -1,3 +1,4 @@
+const title = document.querySelector('.title');
 const ipaddress = document.querySelector('.ip-address');
 const ipfact = document.querySelector('.ip-fact');
 const toast = document.querySelector('.toast');
@@ -23,8 +24,11 @@ fetch(URL).then(
     (res) => res.json()
 ).then(
     (res) => {
+        console.log(res);
         my_ip = res.origin
+        my_ip = my_ip.replace(",", "\n");
         ipaddress.innerText = my_ip;
+        title.innerText = "Your Internet Protocol Address is";
         // let ip_numbers = my_ip.split('.');
         // ip_numbers.forEach(element => {
         //     get_number_fact(element);
