@@ -27,6 +27,7 @@ body::-webkit-scrollbar {
     display: none;
 }
 body {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -109,7 +110,7 @@ body {
     font-size: 30px;
 }
 .container{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     margin-top: 40px;
     display: flex;
@@ -235,7 +236,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     margin: 20px 40px;
     color: var(--font);
 }
@@ -374,10 +375,10 @@ footer{
 
 @media only screen and (max-width: 768px) {
     .header{
-        width: 100vw;
+        width: 100%;
     }
     .container{
-        width: 100vw;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;

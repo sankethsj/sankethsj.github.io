@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(180, 180, 180);
+    background-color: rgb(10, 10, 10);
+}
+
+.title {
+    margin: 20px 0;
+    cursor: pointer;
+    font-size: 28px;
+    text-align: center;
+    color: bisque;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h2 {
+    text-align: center;
+}
+
+.list-papers {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    width: 250px;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    transition: all 0.3s;
+    border: 2px solid rgb(181, 200, 252);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+li:hover {
+    transform: scale(1.01);
+}
+
+.my-button {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(253, 222, 184);
+    color: black;
+    margin: 20px;
+    font-size: 14px;
+}
+
+.my-button:hover {
+    background-color: bisque;
+}
+
+.my-button:active {
+    transform: scale(0.99);
+}
+
+.footer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer h3 {
+    font-size: 14px;
+    margin: 20px;
+}
+
+.footer a,
+.footer a:link,
+.footer a:visited {
+    text-decoration: none;
+    margin: 10px;
+    color: var(--link);
+    font-size: 14px;
+}
