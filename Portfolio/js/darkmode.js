@@ -22,3 +22,4 @@ else{
     localStorage.setItem('theme','light');
 }
 
+console.log("I don't know what you're looking for here, but I'm glad you're here. Have a great day!");

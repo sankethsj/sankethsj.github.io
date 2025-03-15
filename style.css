@@ -5,7 +5,9 @@
     --card: rgb(255,255,255);
     --shadow1: rgb(207, 207, 207);
     --shadow2: rgb(207, 207, 207);
-    --footer: rgb(231, 231, 231); 
+    --footer: rgb(231, 231, 231);
+    --github-button-bg: rgba(0, 0, 0, 1);
+    --github-button-text: rgb(255, 255, 255);
 }
 [data-theme="dark"] {
     --bg: rgba(0, 0, 0, 1);
@@ -15,6 +17,8 @@
     --shadow1: #111111;
     --shadow2: #111111;
     --footer: rgb(37, 37, 37);
+    --github-button-bg: rgb(34, 34, 34);
+    --github-button-text: rgb(255, 255, 255);
 }
 
 *{

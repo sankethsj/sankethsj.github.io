@@ -1,0 +1,129 @@
+{
+    "devicons": {
+        "python": {
+            "name": "Python",
+            "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+        },
+        "flutter": {
+            "name": "Flutter",
+            "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg"
+        },
+        "dart": {
+            "name": "Dart",
+            "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg"
+        },
+        "chromadb": {
+            "name": "ChromaDB",
+            "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dynamodb/dynamodb-original.svg"
+        },
+        "javascript": {
+            "name": "JavaScript",
+            "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        },
+        "github-workflow": {
+            "name": "Github Workflow",
+            "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg"
+        },
+        "html": {
+            "name": "HTML",
+            "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+        },
+        "css": {
+            "name": "CSS",
+            "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+        },
+        "flask": {
+            "name": "Flask",
+            "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg"
+        },
+        "nodejs": {
+            "name": "NodeJS",
+            "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+        },
+        "android": {
+            "name": "Android",
+            "link": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg"
+        }
+    },
+    "projects": [
+        {
+            "name": "MyQR - QR Code Creator & Scanner",
+            "tech": [
+                "flutter",
+                "dart",
+                "android"
+            ],
+            "description": "A Material You themed Android app to generate, save, and share QR codes. Features include QR code generation, scanning, and dark mode support.",
+            "thumbnail": "/projects/assets/myqr.jpg",
+            "link": "https://github.com/sankethsj/qr-code-generator",
+            "extra-link": {
+                "link-img": "/projects/assets/play-store.png",
+                "link-text": "Playstore",
+                "link-url": "https://play.google.com/store/apps/details?id=sj.tech.myqr&pcampaignid=web_share"
+            }
+        },
+        {
+            "name": "File Sharing Service",
+            "tech": [
+                "python",
+                "flask",
+                "html",
+                "css",
+                "javascript"
+            ],
+            "description": "A sleek file uploader and downloader website built with Flask for the backend and HTML/JavaScript for the frontend, enabling users to easily upload and download files through a web interface.",
+            "thumbnail": "/projects/assets/filehookups.jpg",
+            "link": "https://github.com/sankethsj/filehookups",
+            "extra-link": {
+                "link-img": "/projects/assets/web.svg",
+                "link-text": "Website",
+                "link-url": "https://filehookups.onrender.com/"
+            }
+        },
+        {
+            "name": "LLM Chatbot for PDF Insights (RAG)",
+            "tech": [
+                "Phi3-LLM",
+                "ChromaDB",
+                "Python",
+                "NLP"
+            ],
+            "description": "An advanced chatbot leveraging Retrieval-Augmented Generation (RAG) to answer your questions based on the content of PDF documents, providing accurate and contextually relevant responses.",
+            "thumbnail": "/projects/assets/rag.svg",
+            "link": "https://github.com/sankethsj/phi3-rag-application"
+        },
+        {
+            "name": "High-Resolution Newspaper PDF Generator",
+            "tech": [
+                "Python",
+                "github-workflow",
+                "PyPDF"
+            ],
+            "description": "This Python project automates the daily process of downloading high-resolution images of newspaper pages, merging them into a single PDF, and making it available for download on a website. The bot is triggered every morning using GitHub Actions, ensuring that the latest edition is always ready for users. The project emphasizes producing high-quality PDFs, preserving the clarity and detail of the original newspaper, and provides an efficient solution for archiving and accessing daily newspapers online.",
+            "thumbnail": "/projects/assets/newspaper-bot.svg",
+            "link": "https://github.com/sankethsj/newspaper-bot",
+            "extra-link": {
+                "link-img": "",
+                "link-text": "Visit Website",
+                "link-url": "https://sankethsj.github.io/epaper/"
+            }
+        },
+        {
+            "name": "Chat Box",
+            "tech": [
+                "nodejs",
+                "javascript",
+                "html",
+                "css"
+            ],
+            "description": "ChatBox is a simple, real-time chat application that allows users to join multiple chat rooms using a username—no sign-up required. Messages are ephemeral (non-persistent), making ChatBox a great place for casual, in-the-moment conversations.",
+            "thumbnail": "/projects/assets/chatbox.jpg",
+            "link": "https://github.com/sankethsj/chatbox",
+            "extra-link": {
+                "link-img": "/projects/assets/web.svg",
+                "link-text": "Website",
+                "link-url": "https://chatbox-ec3s.onrender.com/"
+            }
+        }
+    ]
+}

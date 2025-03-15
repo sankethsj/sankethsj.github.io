@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/favicon_io/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon_io/favicon-16x16.png" sizes="16x16">
+    <title>Sanketh Jain - Projects</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+
+<body>
+    
+    <div class="header">
+        <div class="title" onclick="window.location='/'">SJ</div>
+        <div class="bar">
+            <div class="nav">
+                <ul>
+                    <li><a id="home-link" href="/" rel="noopener noreferrer">Home</a></li>
+                </ul>
+            </div>
+            <img id="dark-mode" src="/Portfolio/assets/dark-mode.svg" alt="uxwing.com" onclick="switchTheme();">
+            <i class="fa fa-bars" aria-hidden="true" onclick="openNav(event);"></i>
+        </div>
+    </div>
+
+    <div id="mobileNav" class="mobileNav">
+        <div id="close" class="close">
+            <i class="fa fa-times" aria-hidden="true" onclick="closeNav(event);"></i>
+        </div>
+        <ul>
+            <li><a id="home-link" href="/" rel="noopener noreferrer">Home</a></li>
+        </ul>
+    </div>
+
+    <section class="projects-section" id="projects-new">
+        <!-- Projects will be populated here -->
+    </section>
+
+    <div class="f2">
+        <footer>
+            <small>Coded by </small>
+            <h1 class="ml3">Sanketh Jain</h1>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="/Portfolio/js/darkmode.js"></script>
+    <script src="/Portfolio/js/scroll.js"></script>
+</body>
+
+</html>

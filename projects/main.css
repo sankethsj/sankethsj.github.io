@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins';
+    background-color: var(--bg);
+}
+
+.projects-section{
+    margin-top: 50px;
+}
+
+.project-card{
+    margin: 40px 20px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 16px;
+    background-color: var(--card);
+    padding: 20px;
+    box-shadow: 1px 2px 28px 0px var(--shadow1);
+    -webkit-box-shadow: 1px 2px 28px 0px var(--shadow1);
+    -moz-box-shadow: 1px 2px 28px 0px var(--shadow1);
+}
+
+.project-name{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--font);
+}
+
+.project-card-blocks{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-img-div{
+    display: flex;
+}
+
+.project-img{
+    max-width: 900px;
+    border-radius: 8px;
+    height: auto;
+    object-fit: cover;
+    border: 2px solid var(--font);
+}
+
+.project-description{
+    max-width: 100%;
+    margin-bottom: 30px;
+    color: var(--font);
+}
+
+@media (max-width:900px) {
+    .project-img{
+        max-width: 700px;
+    }
+}
+
+@media (max-width:800px) {
+    .project-img{
+        max-width: 500px;
+    }
+}
+
+@media (max-width:600px) {
+    .project-img{
+        max-width: 400px;
+    }
+}
+
+@media (max-width:500px) {
+    .project-img{
+        max-width: 300px;
+    }
+}
+
+@media (min-width:1200px) {
+    .project-description{
+        max-width: 400px;
+        margin-bottom: 30px;
+    }
+}
+
+.project-link-section{
+    display: flex;
+    gap: 10px;
+}
+
+.view-button, .view-button-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    text-decoration: none;
+    background-color: var(--github-button-bg);
+    padding: 10px 20px;
+    color: var(--github-button-text);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 4px 4px 4px var(--shadow1),
+                4px 4px 4px var(--shadow1);
+}
+
+.view-button:hover{
+    box-shadow: 6px 6px 4px var(--shadow2),
+                6px 6px 4px var(--shadow2);
+}
+
+.view-button-2{
+    background-color: var(--primary);
+}
+.view-button-2:hover{
+    box-shadow: 6px 6px 4px var(--shadow2),
+                6px 6px 4px var(--shadow2);
+}
+
+.project-tech{
+    display: flex;
+    width: fit-content;
+    gap: 6px;
+    padding: 8px 0;
+}
+
+.tech-item{
+    display: flex;
+    background-color: var(--font);
+    color: var(--bg);
+    gap: 8px;
+    border: 1px solid var(--font);
+    border-radius: 8px;
+    width: fit-content;
+    padding: 4px;
+}
