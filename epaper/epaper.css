@@ -1,101 +1,170 @@
+:root {
+  --bg: #0b0d10;
+  --card: #0f1720;
+  --muted: #b4b8c0;
+  --accent: #7cc0ff;
+  --accent-2: #ffdcae;
+  --glass: rgba(255, 255, 255, 0.03);
+  --radius: 12px;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
+html,
 body {
-    width: 100%;
-    font-family: 'Poppins', sans-serif;
-    color: rgb(180, 180, 180);
-    background-color: rgb(10, 10, 10);
+  height: 100%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--muted);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 28px;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
 .title {
-    margin: 20px 0;
-    cursor: pointer;
-    font-size: 28px;
-    text-align: center;
-    color: bisque;
+  cursor: pointer;
+  color: var(--accent-2);
+  font-size: 28px;
+  font-weight: 600;
 }
 
 .content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
 }
-
 .content h2 {
-    text-align: center;
+  color: #fff;
+  text-align: center;
+  margin: 10px 0 18px;
+  font-size: 20px;
 }
 
 .list-papers {
-    margin: 20px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 }
 
-li {
-    width: 250px;
-    height: 170px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    list-style: none;
-    transition: all 0.3s;
-    border: 2px solid rgb(181, 200, 252);
-    border-radius: 10px;
-    margin: 20px;
-    padding: 10px;
-    text-align: center;
+.paper-section {
+  background: var(--glass);
+  padding: 16px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+.section-title {
+  color: #fff;
+  font-size: 16px;
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-region {
+  font-size: 12px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 4px 8px;
+  border-radius: 8px;
 }
 
-li:hover {
-    transform: scale(1.01);
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
 }
 
-.my-button {
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: rgb(253, 222, 184);
-    color: black;
-    margin: 20px;
-    font-size: 14px;
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+}
+.meta {
+  display: flex;
+  flex-direction: column;
+}
+.paper-name {
+  font-weight: 600;
+  color: #fff;
+  font-size: 16px;
+}
+.paper-date {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 8px;
 }
 
-.my-button:hover {
-    background-color: bisque;
+.btn {
+  display: inline-block;
+  background: var(--accent-2);
+  color: #111;
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+.btn .size {
+  color: #444;
+  font-weight: 500;
+  margin-left: 6px;
+  font-size: 12px;
+}
+.btn:hover {
+  filter: brightness(0.98);
+  transform: translateY(-1px);
 }
 
-.my-button:active {
-    transform: scale(0.99);
+.empty {
+  color: var(--muted);
+  text-align: center;
+  padding: 24px;
+}
+.error {
+  color: #ffb3b3;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 6px;
 }
 
 .footer {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  margin-top: 26px;
+  margin-bottom: 26px;
+  text-align: center;
+  color: var(--muted);
 }
-
 .footer h3 {
-    font-size: 14px;
-    margin: 20px;
+    margin-bottom: 26px;
+}
+.footer a {
+  color: var(--accent-2);
+  text-decoration: none;
+  margin-left: 6px;
 }
 
-.footer a,
-.footer a:link,
-.footer a:visited {
-    text-decoration: none;
-    margin: 10px;
-    color: var(--link);
-    font-size: 14px;
+@media (max-width: 560px) {
+  .title {
+    font-size: 24px;
+  }
+  .btn {
+    padding: 8px;
+  }
 }

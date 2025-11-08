@@ -1,52 +1,122 @@
-const URL = "https://api.github.com/repos/sankethsj/newspaper-bot/contents/output"
+const URL = "https://api.github.com/repos/sankethsj/newspaper-bot/contents/output";
 
-async function logPapers() {
+// mapping from file-prefix to display title and region
+const PAPER_MAP = {
+    'KANPRABHA': { title: 'Kannada Prabha', region: 'Mangaluru' },
+    'VISHWAVANI': { title: 'Vishwavani', region: 'Bengaluru' }
+};
+
+const PREFERRED_ORDER = ['KANPRABHA', 'VISHWAVANI'];
+
+async function fetchPapers() {
     const response = await fetch(URL);
+    if (!response.ok) throw new Error('Failed to fetch papers');
     return await response.json();
 }
 
-logPapers().then(
-    res => {
-        let ul_elem = document.querySelector('.list-papers');
+function extractDateFromName(name) {
+    // Find an 8-digit YYYYMMDD token in the filename
+    const base = name.split('.')[0];
+    const m = base.match(/(\d{8})/);
+    if (!m) return null;
+    const s = m[1];
+    const yyyy = s.slice(0, 4);
+    const mm = s.slice(4, 6);
+    const dd = s.slice(6, 8);
+    const iso = `${yyyy}-${mm}-${dd}`;
+    return new Date(iso);
+}
 
-        if (res && res.length > 0) {
-            ul_elem.innerHTML = "";
+function formatDateFromName(name) {
+    const d = extractDateFromName(name);
+    if (!d || isNaN(d)) return 'Unknown';
+    const dd = String(d.getDate()).padStart(2, '0');
+    const mm = String(d.getMonth() + 1).padStart(2, '0');
+    const yyyy = d.getFullYear();
+    return `${dd}-${mm}-${yyyy}`;
+}
 
-            // sort by name
-            res = res.sort((a, b) => {
-                const nameA = a.name.toUpperCase(); // ignore upper and lowercase
-                const nameB = b.name.toUpperCase(); // ignore upper and lowercase
-                if (nameA < nameB) {
-                    return 1;
-                }
-                if (nameA > nameB) {
-                    return -1;
-                }
+function sizeInMB(bytes) {
+    return (bytes / (1024 * 1024)).toFixed(1);
+}
 
-                // names must be equal
-                return 0;
-            });
+fetchPapers().then(res => {
+    const container = document.querySelector('.list-papers');
+    container.innerHTML = '';
 
-            res.forEach(paper => {
-                let size_in_mb = Math.round(paper["size"] / 1000000, 2);
-                let paper_name_split = paper["name"].split(".")[0].split("_")
-                let date_string = paper_name_split[paper_name_split.length - 1]
-                let yyyy = date_string.slice(0, 4)
-                let mm = date_string.slice(4, 6)
-                let dd = date_string.slice(6, 8)
-                date_string = `${dd}-${mm}-${yyyy}`
-
-                var elem = `<li>
-                                    <h2>Date : ${date_string}</h2>
-                                    <h3>Mangaluru region</h3>
-                                    <a class="my-button" href="${paper['download_url']}"> Download (${size_in_mb} MB)</a>
-                                </li>`;
-                ul_elem.insertAdjacentHTML('beforeEnd', elem);
-            });
-        } else {
-            ul_elem.innerHTML = "<h2>Papers not Available!</h2>";
-        }
-
-
+    if (!res || res.length === 0) {
+        container.innerHTML = '<h2 class="empty">Papers not available</h2>';
+        return;
     }
-)
+
+    // Group by date (YYYY-MM-DD). Files without a date go to 'unknown'.
+    const groupsByDate = {};
+    res.forEach(item => {
+        const dateObj = extractDateFromName(item.name);
+        const key = dateObj && !isNaN(dateObj) ? dateObj.toISOString().slice(0, 10) : 'unknown';
+        if (!groupsByDate[key]) groupsByDate[key] = [];
+        groupsByDate[key].push(item);
+    });
+
+    // Sort date keys descending (newest first), keep 'unknown' at the end
+    const keys = Object.keys(groupsByDate).sort((a, b) => {
+        if (a === 'unknown') return 1;
+        if (b === 'unknown') return -1;
+        return b.localeCompare(a);
+    });
+
+    keys.forEach(dateKey => {
+        const displayDate = dateKey === 'unknown' ? 'Unknown Date' : (()=>{
+            const d = new Date(dateKey);
+            const dd = String(d.getDate()).padStart(2,'0');
+            const mm = String(d.getMonth()+1).padStart(2,'0');
+            const yyyy = d.getFullYear();
+            return `${dd}-${mm}-${yyyy}`;
+        })();
+
+        const section = document.createElement('section');
+        section.className = 'paper-section';
+        section.innerHTML = `<h3 class="section-title">${displayDate} <span class="section-region">${groupsByDate[dateKey].length} papers</span></h3><div class="cards"></div>`;
+        const cards = section.querySelector('.cards');
+
+        // Within a date, group by publisher prefix so multiple papers for same date show separately
+        const items = groupsByDate[dateKey];
+        // sort items by publisher name then filename
+        items.sort((a, b) => {
+            const pa = (a.name||'').toUpperCase();
+            const pb = (b.name||'').toUpperCase();
+            return pa.localeCompare(pb);
+        });
+
+        items.forEach(item => {
+            const base = (item.name || '').split('.')[0];
+            const parts = base.split('_');
+            const prefix = (parts[0] || 'UNKNOWN').toUpperCase();
+            const meta = PAPER_MAP[prefix] || { title: prefix, region: 'Unknown' };
+
+            const date = formatDateFromName(item.name);
+            const size = sizeInMB(item.size);
+            const url = item.download_url || '#';
+
+            const card = document.createElement('article');
+            card.className = 'card';
+            card.innerHTML = `
+                <div class="card-content">
+                    <div class="meta">
+                        <div class="paper-name">${meta.title} <span class="region-badge">${meta.region}</span></div>
+                        <div class="paper-date">${date}</div>
+                    </div>
+                    <div class="card-actions">
+                        <a class="btn" href="${url}" target="_blank" rel="noopener">Download <span class="size">(${size} MB)</span></a>
+                    </div>
+                </div>`;
+            cards.appendChild(card);
+        });
+
+        container.appendChild(section);
+    });
+
+}).catch(err => {
+    const container = document.querySelector('.list-papers');
+    container.innerHTML = `<h2 class="empty">Error loading papers</h2><p class="error">${err.message}</p>`;
+});
