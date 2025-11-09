@@ -3,10 +3,11 @@ const URL = "https://api.github.com/repos/sankethsj/newspaper-bot/contents/outpu
 // mapping from file-prefix to display title and region
 const PAPER_MAP = {
     'KANPRABHA': { title: 'Kannada Prabha', region: 'Mangaluru' },
+    'HOSADIGANTHA': { title: 'Hosadiganta', region: 'Mangaluru' },
     'VISHWAVANI': { title: 'Vishwavani', region: 'Bengaluru' }
 };
 
-const PREFERRED_ORDER = ['KANPRABHA', 'VISHWAVANI'];
+const PREFERRED_ORDER = ['KANPRABHA', 'HOSADIGANTHA', 'VISHWAVANI'];
 
 async function fetchPapers() {
     const response = await fetch(URL);
