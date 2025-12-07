@@ -8,9 +8,9 @@
     <link rel="icon" type="image/png" href="/favicon_io/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/favicon_io/favicon-16x16.png" sizes="16x16">
     <meta name="description"
-        content="Hi, I'm Sanketh S Raj Jain. This is my portfolio website. Some of my web applications are listed here. Please do check these out. Enthusiastic Coder. Coding to learn. Mechatronics Engineer | Checkout my projects here">
+        content="Hi, I'm Sanketh Jain. This is my portfolio website. Some of my web applications are listed here. Please do check these out. Enthusiastic Coder. Coding to learn. Mechatronics Engineer | Checkout my projects here">
     <meta itemprop="description"
-        content="Hi, I'm Sanketh S Raj Jain. This is my portfolio website. Some of my web applications are listed here. Please do check these out. Enthusiastic Coder. Coding to learn. Mechatronics Engineer | Checkout my projects here">
+        content="Hi, I'm Sanketh Jain. This is my portfolio website. Some of my web applications are listed here. Please do check these out. Enthusiastic Coder. Coding to learn. Mechatronics Engineer | Checkout my projects here">
     <!-- Open Graph data -->
     <meta property="og:title" content="Sanketh Jain | Mechatronics Engineer | Checkout my projects here">
     <meta property="og:description"
@@ -21,7 +21,7 @@
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="sankethjain_">
-    <meta name="twitter:title" content="Sanketh S Raj Jain">
+    <meta name="twitter:title" content="Sanketh Jain">
     <meta name="twitter:description"
         content="Hi, I'm Sanketh Jain. Enthusiastic Coder. Coding to learn. Mechatronics Engineer | Checkout my projects here">
     <meta name="twitter:image" content="https://sankethsj.github.io/favicon_io/android-chrome-512x512.png">
@@ -31,20 +31,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>SJ - Sanketh Jain Portfolio</title>
+    <meta name="theme-color" content="#ffffff">
+    <title>SJ - Sanketh Jain</title>
 </head>
 
 <body>
+
+    <a class="skip-link" href="#container">Skip to content</a>
 
     <div class="header">
         <div class="title" onclick="window.location='/'">SJ</div>
         <div class="bar">
             <div class="nav">
                 <ul>
-                    <li><a id="home-link" href="#container" rel="noopener noreferrer">Home</a></li>
-                    <li><a id="about-link" href="#about" rel="noopener noreferrer">Tools</a></li>
-                    <li><a id="contact-link" href="#contact" rel="noopener noreferrer">Contact</a></li>
-                    <li><a id="projects-link" href="/profile" rel="noopener noreferrer">Profile</a></li>
+                    <li><a id="home-link" href="#container">Home</a></li>
+                    <li><a id="about-link" href="#about">Tools</a></li>
+                    <li><a id="contact-link" href="#contact">Contact</a></li>
+                    <li><a id="projects-link" href="/profile">Profile</a></li>
                 </ul>
             </div>
             <img id="dark-mode" src="/Portfolio/assets/dark-mode.svg" alt="uxwing.com" onclick="switchTheme();">
@@ -57,10 +60,10 @@
             <i class="fa fa-times" aria-hidden="true" onclick="closeNav(event);"></i>
         </div>
         <ul>
-            <li><a id="home-link" href="#container" rel="noopener noreferrer">Home</a></li>
-            <li><a id="about-link" href="#about" rel="noopener noreferrer">Tools</a></li>
-            <li><a id="contact-link" href="#contact" rel="noopener noreferrer">Contact</a></li>
-            <li><a id="projects-link" href="/profile" rel="noopener noreferrer">Profile</a></li>
+            <li><a id="home-link" href="#container">Home</a></li>
+            <li><a id="about-link" href="#about">Tools</a></li>
+            <li><a id="contact-link" href="#contact">Contact</a></li>
+            <li><a id="projects-link" href="/profile">Profile</a></li>
         </ul>
     </div>
 
@@ -77,21 +80,24 @@
                 <h1 class="ml16">Coding to learn!</h1>
 
             </div>
-            <a id="cta" href="/projects" rel="noopener noreferrer">Projects</a>
+            <div class="cta-container">
+                <a class="cta primary" href="/profile" rel="noopener noreferrer">Profile</a>
+                <a class="cta secondary" href="/projects" rel="noopener noreferrer">Projects</a>
+            </div>
         </div>
-        <img id="svg" src="/Portfolio/assets/bg.png" alt="Sanketh Jain">
+        <img id="svg" src="/Portfolio/assets/bg.png" alt="Sanketh Jain" loading="lazy">
     </div>
 
     <div id="projects">
         <div class="heading">Checkout my Projects &#128218;</div>
         <ul class="cards">
-            <li><a href="https://play.google.com/store/apps/details?id=sj.tech.myqr" target="_blank">MyQR - Create/Scan
+            <li><a href="https://play.google.com/store/apps/details?id=sj.tech.myqr" target="_blank" rel="noopener noreferrer">MyQR - Create/Scan
                     QR codes</a></li>
-            <li><a href="https://chatbox-ec3s.onrender.com/" target="_blank">ChatBox</a></li>
+            <li><a href="https://chatbox-ec3s.onrender.com/" target="_blank" rel="noopener noreferrer">ChatBox</a></li>
             <li><a href="/clock" target="_blank">Clock Clock 24</a></li>
-            <li><a href="https://tools-for.web.app/" target="_blank">Web Dev Tools</a></li>
-            <li><a href="https://moviesarchive.web.app" target="_blank">Movies Archive</a></li>
-            <li><a href="https://stocksignal.github.io" target="_blank">Stock Signal</a></li>
+            <li><a href="https://tools-for.web.app/" target="_blank" rel="noopener noreferrer">Web Dev Tools</a></li>
+            <li><a href="https://moviesarchive.web.app" target="_blank" rel="noopener noreferrer">Movies Archive</a></li>
+            <li><a href="https://stocksignal.github.io" target="_blank" rel="noopener noreferrer">Stock Signal</a></li>
             <li><a href="/ip" target="_blank">Find My IP</a></li>
             <li><a href="/epaper/" target="_blank">E-Paper bot</a></li>
             <li><a href="/sipCalculator/sip.html" target="_blank">SIP Calculator</a></li>
@@ -120,7 +126,7 @@
             </li>
 
             <li>
-                <img src="/Portfolio/assets/snowflake-logo.svg" width="80 em" />
+                <img src="/Portfolio/assets/snowflake-logo.svg" width="80 em" loading="lazy" />
                 <p>Snowflake</p>
             </li>
 
@@ -271,8 +277,8 @@
     <div id="contact">
         <div class="heading">two ways to say hi! &#128075;</div>
         <div class="media">
-            <a href="https://github.com/sankethsj" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/in/sankethjain/" target="_blank"><i class="fa fa-linkedin-square"
+                <a href="https://github.com/sankethsj" target="_blank" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/sankethjain/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin-square"
                     aria-hidden="true"></i></a>
         </div>
     </div>
@@ -292,7 +298,7 @@
                 <li><a href="#contact" rel="noopener noreferrer">Contact</a></li>
                 <li><a href="#projects" rel="noopener noreferrer">Projects</a></li>
             </ul>
-            <img id="profilepic" src="/Portfolio/assets/profile.svg" alt="undraw.co">
+            <img id="profilepic" src="/Portfolio/assets/profile.svg" alt="undraw.co" loading="lazy">
         </div>
 
         <div class="f2">
@@ -308,7 +314,11 @@
 <script src="/Portfolio/js/scroll.js"></script>
 <script src="/Portfolio/js/animation.js"></script>
 <script>
-    fetch('https://chatbox-ec3s.onrender.com/', { mode: 'no-cors' });
+    try {
+        fetch('https://chatbox-ec3s.onrender.com/', { mode: 'no-cors' });
+    } catch (e) {
+        console.warn('fetch failed', e);
+    }
 </script>
 
 </html>

@@ -1,24 +1,98 @@
 :root{
+    /* Colors */
     --bg: rgba(255, 255, 255, 1);
     --font: rgba(0, 0, 0, 1);
     --primary: rgb(206, 0, 51);
+    --primary-2: rgba(255,90,100,0.9);
     --card: rgb(255,255,255);
-    --shadow1: rgb(207, 207, 207);
-    --shadow2: rgb(207, 207, 207);
     --footer: rgb(231, 231, 231);
     --github-button-bg: rgba(0, 0, 0, 1);
     --github-button-text: rgb(255, 255, 255);
+
+    /* Shadows (color sources) */
+    --shadow1: rgb(207, 207, 207);
+    --shadow2: rgb(207, 207, 207);
+
+    /* Elevations */
+    --elevation-1: 4px 4px 10px var(--shadow1);
+    --elevation-2: -4px -4px 10px var(--shadow2);
+    --elevation-card: 0 6px 18px rgba(0,0,0,0.06);
+    --elevation-card-hover: 0 18px 40px rgba(0,0,0,0.12);
+
+    /* Sizing and spacing */
+    --header-height: 60px;
+    --header-padding: 20px;
+    --title-font-size: 40px;
+    --nav-font-size: 20px;
+    --nav-gap: 20px;
+    --title-margin-left: 40px;
+    --container-height: 100vh;
+    --intro-font-size: 40px;
+    --container-margin-top: 40px;
+    --svg-width: 40%;
+    --darkmode-width: 20px;
+    --darkmode-margin-right: 40px;
+    --bar-fa-fontsize: 30px;
+    --nav-item-padding: 5px;
+
+    /* Card tokens */
+    --card-radius-sm: 4px;
+    --card-radius-lg: 12px;
+    --card-padding-vertical: 20px;
+    --card-padding-horizontal: 22px;
+    --card-accent-width: 6px;
+
+    /* CTA tokens */
+    --cta-radius: 999px;
+    --cta-padding-y: 10px;
+    --cta-padding-x: 20px;
+    --cta-font-size: 0.95rem;
+
+    /* Focus / accent */
+    --focus-outline: 3px solid rgba(0,0,0,0.06);
+    --focus-border-color: rgba(0,0,0,0.06);
+
+    /* Breakpoints */
+    --bp-mobile: 768px;
+    --cards-max-width: 1100px;
+    --grid-gap: 20px;
+    --heading-font-size: 40px;
+    --heading-margin-top: 80px;
+    --card-inset-color: rgba(255,255,255,0.02);
+    --card-title-size: 1.15rem;
+    /* Spacing scale */
+    --space-sm: 10px;
+    --space-md: 20px;
+    --space-lg: 40px;
+
+    /* Social / icon sizes */
+    --icon-large-size: 80px;
+    --social-size: 100px;
+    --social-icon-size: 60px;
+
+    --contact-height: 100vh;
+    --page-width-percent: 90%;
+    --profilepic-width: 300px;
+    --container-negative-top: -60px;
+    --transition-fast: 180ms;
+    --transition-medium: 220ms;
+    --muted-border: rgba(0,0,0,0.08);
+    --skip-link-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 [data-theme="dark"] {
     --bg: rgba(0, 0, 0, 1);
     --font: rgb(231, 231, 231);
     --primary: rgb(0, 214, 203);
+    --primary-2: rgba(0,200,180,0.9);
     --card: rgb(0, 0, 0);
     --shadow1: #111111;
     --shadow2: #111111;
     --footer: rgb(37, 37, 37);
     --github-button-bg: rgb(34, 34, 34);
     --github-button-text: rgb(255, 255, 255);
+
+    --elevation-card: 0 6px 18px rgba(0,0,0,0.18);
+    --elevation-card-hover: 0 18px 40px rgba(0,0,0,0.28);
 }
 
 *{
@@ -43,36 +117,36 @@ body {
 }
 .header{
     width: 100%;
-    height: 60px;
+    height: var(--header-height);
     position: fixed;
     top: 0;
     z-index: 1;
-    padding: 20px;
+    padding: var(--header-padding);
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--bg);
-    box-shadow: 4px 4px 10px var(--shadow1);
+    box-shadow: var(--elevation-1);
 }
 .title{
-    cursor: default;
+    cursor: pointer;
     color: var(--font);
-    font-size: 40px;
+    font-size: var(--title-font-size);
     font-weight: 900;
-    margin-left: 40px;
+    margin-left: var(--title-margin-left);
 }
 .nav ul{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    margin-right: 40px;
+    margin-right: var(--nav-gap);
 }
 .nav ul li{
     display: block;
     list-style: none;
-    margin: 0 20px;
-    font-size: 20px;
+    margin: 0 var(--nav-gap);
+    font-size: var(--nav-font-size);
     transition: all 0.2s;
 }
 .nav li:hover{
@@ -87,18 +161,18 @@ body {
 }
 .nav ul li:nth-child(4){
     border: 2px solid var(--font);
-    border-radius: 5px;
-    padding: 5px;
+    border-radius: var(--card-radius-sm);
+    padding: var(--nav-item-padding);
 }
 
 .bar{
     display: flex;
 }
 #dark-mode{
-    margin-left: -20px;
-    margin-right: 40px;
+    margin-left: calc(var(--darkmode-width) * -1);
+    margin-right: var(--darkmode-margin-right);
     cursor: pointer;
-    width: 20px;
+    width: var(--darkmode-width);
     transition: 0.3s ease-in-out;
 }
 #dark-mode:hover{
@@ -109,14 +183,14 @@ body {
     align-self: center;
     color: var(--font);
     margin-left: 10px;
-    margin-right: 40px;
+    margin-right: var(--darkmode-margin-right);
     cursor: pointer;
-    font-size: 30px;
+    font-size: var(--bar-fa-fontsize);
 }
 .container{
     width: 100%;
-    height: 100vh;
-    margin-top: 40px;
+    height: var(--container-height);
+    margin-top: var(--container-margin-top);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -124,11 +198,11 @@ body {
     color: var(--font);
 }
 .intro{
-    font-size: 40px;
+    font-size: var(--intro-font-size);
 }
 
 .im,.desc,.name{
-    margin-left: 30px;
+    margin-left: var(--title-margin-left);
 }
 
 .ml15 {
@@ -155,7 +229,7 @@ body {
 }
 
 #svg{
-    width: 40%;
+    width: var(--svg-width);
 }
 #mobileNav{
     display: none;
@@ -174,18 +248,43 @@ body {
     color: var(--bg);
     font-size: 30px;
     background-color: var(--font);
-    box-shadow: 4px 4px 10px var(--shadow1),
-            -4px -4px 10px var(--shadow2);
+    box-shadow: var(--elevation-1), var(--elevation-2);
     transition: all 0.3s;
 }
 
-#cta:hover{
-    transform: scale(1.05);
+/* Modern CTA styles (new) */
+.cta-container{
+    display: flex;
+    gap: 12px;
+    margin-top: 34px;
+    margin-left: 30px;
+    flex-wrap: wrap;
 }
-
-#cta:active{
-    transform: scale(0.95);
+.cta{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--cta-padding-y) var(--cta-padding-x);
+    border-radius: var(--cta-radius);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: var(--cta-font-size);
+    transition: transform var(--transition-fast) ease, box-shadow var(--transition-fast) ease, opacity 120ms ease;
+    box-shadow: var(--elevation-card);
 }
+.cta.primary{
+    background: linear-gradient(90deg, var(--primary), var(--primary-2));
+    color: #fff;
+    border: none;
+}
+.cta.secondary{
+    background: transparent;
+    color: var(--font);
+    border: 1.5px solid var(--muted-border);
+}
+.cta:hover{transform: translateY(-4px); box-shadow: var(--elevation-card-hover);}
+.cta:active{transform: translateY(-1px) scale(0.995);}
+.cta:focus{outline: var(--focus-outline); outline-offset: 3px}
 
 #projects{
     color: var(--font);
@@ -196,44 +295,72 @@ body {
     align-items: center;
 }
 .heading{
-    margin-top: 80px;
+    margin-top: var(--heading-margin-top);
     margin-bottom: 20px;
-    font-size: 40px;
+    font-size: var(--heading-font-size);
     font-weight: 700;
 }
 .cards{
     list-style: none;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--grid-gap);
+    /* let cards expand to fill available space, up to a practical max-width */
+    width: min(var(--cards-max-width), 95%);
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    padding: 0;
+    margin: 0 auto;
 }
 .cards li{
-    width: 340px;
-    height: 180px;
+    min-height: 120px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-start;
     background-color: var(--card);
-    box-shadow: 4px 4px 10px var(--shadow1),
-                -4px -4px 10px var(--shadow2);
-    border-radius: 4px;
-    margin: 20px 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--card-radius-lg);
+    padding: var(--card-padding-vertical) var(--card-padding-horizontal);
+    box-shadow: var(--elevation-card), inset 0 1px 0 var(--card-inset-color);
+    transition: transform 220ms ease, box-shadow 220ms ease, border-top 220ms ease;
+    margin: 0;
+    width: 340px;
+    box-sizing: border-box;
 }
-.cards li a,.cards li a:link,.cards li a:visited{
+.cards li::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background: var(--primary);
+}
+.cards li a, .cards li a:link{
     color: var(--font);
-    font-size: 30px;
+    font-size: var(--card-title-size);
     text-decoration: none;
-    text-align: center;
-    font-weight: 500;
-    transition: all 0.3s ease-in-out;
+    text-align: left;
+    font-weight: 600;
+    width: 100%;
+    display: block;
+    padding-left: calc(var(--card-accent-width) + 14px);
+    transition: color 180ms ease;
 }
 .cards li a:hover{
     color: var(--primary);
 }
-.cards li:active{
-    transform: scale(0.95);
+.cards li:focus-within,
+.cards li:hover{
+    transform: translateY(-6px);
+    box-shadow: var(--elevation-card-hover);
+    border-top: var(--card-accent-width) solid var(--primary);
+}
+.cards li:focus-within{
+    outline: var(--focus-outline);
+    outline-offset: 4px;
 }
 #about{
     display: flex;
@@ -256,17 +383,17 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px;
-    padding: 10px;
-    transition: all 0.3s ease-in-out;
+    margin: var(--space-md);
+    padding: var(--space-sm);
+    transition: all var(--transition-medium) ease-in-out;
 }
 #about ul li i{
-    font-size: 80px;
+    font-size: var(--icon-large-size);
 }
 #about ul li:hover{
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px var(--shadow1), -2px -2px 4px var(--shadow2);
+    border-radius: var(--card-radius-lg);
+    padding: var(--space-sm);
+    box-shadow: var(--elevation-card), inset 0 1px 0 var(--card-inset-color);
     transform: scale(1.2);
 }
 .devicon-visualstudio-plain{
@@ -275,7 +402,7 @@ body {
 #contact{
     color: var(--font);
     width: 100%;
-    height: 100vh;
+    height: var(--contact-height);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -290,21 +417,21 @@ body {
 }
 .media a,.media a:link,.media a:visited{
     text-decoration: none;
-    width: 100px;
-    height: 100px;
+    width: var(--social-size);
+    height: var(--social-size);
     display: flex;
     justify-content: center;
     color: var(--font);
     align-items: center;
     background-color: var(--card);
-    box-shadow: 4px 4px 10px var(--shadow1),
-                -4px -4px 10px var(--shadow2);
-    border-radius: 4px;
-    margin: 20px 20px;
-    transition: 0.3s ease-in-out;
+    border-radius: var(--card-radius-lg);
+    padding: var(--card-padding-vertical) var(--card-padding-horizontal);
+    box-shadow: var(--elevation-card), inset 0 1px 0 var(--card-inset-color);
+    margin: var(--space-md);
+    transition: var(--transition-medium) ease-in-out;
 }
 .media .fa{
-    font-size: 60px;
+    font-size: var(--social-icon-size);
 }
 .media a:hover{
     transform: scale(1.2);
@@ -332,27 +459,27 @@ body {
     color: var(--font);
 }
 .wrap{
-    margin: 20px;
-    width: 90%;
+    margin: var(--space-md);
+    width: var(--page-width-percent);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 .f1{
-    margin: 20px;
+    margin: var(--space-md);
 }
 .f1 p{
-    margin: 10px 0;
+    margin: var(--space-sm) 0;
 }
 .foo{
-    margin: 20px;
+    margin: var(--space-md);
     list-style: none;
     display: flex;
     flex-direction: column;
 }
 .foo li{
-    margin: 10px;
+    margin: var(--space-sm);
 }
 #time{
     opacity: 0.6;
@@ -362,10 +489,10 @@ body {
     color: var(--font);
 }
 .f2{
-    margin: 40px;
+    margin: var(--space-lg);
 }
 #profilepic{
-    width: 300px;
+    width: var(--profilepic-width);
 }
 footer{
     display: flex;
@@ -386,15 +513,15 @@ footer{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: -60px;
+        margin-top: var(--container-negative-top);
         height: 120vh;
     }
     
     .title{
-        margin-left: 10px;
+        margin-left: var(--title-margin-left-mobile, 10px);
     }
     .im{
-        font-size: 1.5rem;
+        font-size: var(--im-mobile-font-size, 1.5rem);
     }
     .ml15 {
         font-weight: 800;
@@ -419,10 +546,10 @@ footer{
     }
     .bar .fa{
         display: block;
-        margin-right: 20px;
+        margin-right: var(--darkmode-margin-right);
     }
     #dark-mode{
-        margin-right: 20px;
+        margin-right: var(--darkmode-margin-right);
     }
     @keyframes slide{
         0% {top:100vh;}
@@ -431,25 +558,17 @@ footer{
     .nav{
         display: none;
     }
-    #cta{
-        display: block;
-        text-align: center;
-        margin-top: 100px;
-        width: fit-content;
-        padding: 10px;
+    .cta-container{
+        margin-top: 40px;
         margin-left: 30px;
-        text-decoration: none;
-        border: 2px solid var(--font);
-        border-radius: 5px;
-        color: var(--bg);
-        font-size: 30px;
-        background-color: var(--font);
-        box-shadow: 4px 4px 10px var(--shadow1),
-                -4px -4px 10px var(--shadow2);
-        transition: all 0.3s;
+        flex-direction: column;
+        gap: 12px;
     }
-    #cta:active{
-        transform: scale(0.95);
+    .cta{
+        width: calc(100% - 60px);
+        max-width: none;
+        padding: 12px 18px;
+        font-size: 1.15rem;
     }
     #svg{
         display: none;
@@ -458,7 +577,7 @@ footer{
         align-self: center;
         color: var(--font);
         display: block;
-        margin-right: 10px;
+        margin-right: var(--space-sm);
     }
     .mobileNav{
         position: fixed;
@@ -477,20 +596,20 @@ footer{
     }
     .fa-times{
         cursor: pointer;
-        font-size: 30px;
+        font-size: var(--bar-fa-fontsize);
         position: absolute;
-        right: 20px;
-        top: 20px;
+        right: var(--space-md);
+        top: var(--space-md);
     }
     .mobileNav ul{
         width: 100%;
-        margin-top: 100px;
+        margin-top: calc(var(--heading-margin-top) + var(--space-md));
         list-style: none;
     }
     .mobileNav ul li{
         text-align: center;
         height: 60px;
-        margin: 40px;
+        margin: var(--space-lg);
     }
     .mobileNav ul li a,.mobileNav ul li a:link,.mobileNav ul li a:visited{
         text-decoration: none;
@@ -502,24 +621,27 @@ footer{
         font-size: 1.5rem;
         font-weight: 700;
     }
-    .cards li{
-        width: 320px;
-        height: 80px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--card);
-        box-shadow: 4px 4px 10px var(--shadow1),
-                    -4px -4px 10px var(--shadow2);
-        border-radius: 4px;
-        margin: 20px 20px;
-    }
-    .cards li a,.cards li a:link,.cards li a:visited{
-        color: var(--font);
-        font-size: 1.4rem;
-        text-decoration: none;
-        text-align: center;
-        font-weight: 500;
-        transition: all 0.3s ease-in-out;
-    }
   }
+
+/* Accessibility: visible skip link only when focused */
+.skip-link{
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus{
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+    background: var(--card);
+    color: var(--font);
+    border-radius: 4px;
+    box-shadow: var(--skip-link-shadow);
+    z-index: 9999;
+}
