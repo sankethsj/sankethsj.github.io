@@ -21,8 +21,8 @@ function getTechNameAndLink(techIcons, tech) {
 }
 
 function populateProjects(data) {
-    projects = data["projects"];
-    techIcons = data["devicons"];
+    const projects = data["projects"];
+    const techIcons = data["devicons"];
 
     const projectsContainer = document.getElementById('projects-new');
 
@@ -45,19 +45,21 @@ function populateProjects(data) {
         projectTech.className = "project-tech";
 
         project.tech.forEach(tech => {
-            var res = getTechNameAndLink(techIcons, tech);
+            const res = getTechNameAndLink(techIcons, tech);
             const techElement = document.createElement('div');
+            techElement.className = "tech-item";
             if (res) {
                 const techElementImg = document.createElement('img');
                 techElementImg.className = "tech-item-img";
-                techElementImg.width = "20";
+                techElementImg.width = 20;
                 techElementImg.src = res.link;
+                techElementImg.alt = res.name + ' icon';
+                techElementImg.loading = 'lazy';
                 techElement.appendChild(techElementImg);
             }
             const techElementName = document.createElement('div');
             techElementName.className = "tech-item-name";
-            techElementName.textContent = res ? res.name: tech;
-            techElement.className = "tech-item";
+            techElementName.textContent = res ? res.name : tech;
             techElement.appendChild(techElementName);
             projectTech.appendChild(techElement);
         });
@@ -70,6 +72,8 @@ function populateProjects(data) {
         const projectImage = document.createElement('img');
         projectImage.className = "project-img";
         projectImage.src = project.thumbnail;
+        projectImage.alt = project.name || 'Project image';
+        projectImage.loading = 'lazy';
 
         projectImageDiv.appendChild(projectImage)
         projectCardBlock1.appendChild(projectImageDiv);
@@ -86,34 +90,37 @@ function populateProjects(data) {
 
         const githubImage = document.createElement("img");
         githubImage.src = "/projects/assets/github-original.svg";
-        githubImage.width = "30";
+        githubImage.width = 30;
         githubImage.className = "github-icon";
+        githubImage.alt = "GitHub";
+        githubImage.loading = 'lazy';
 
         const projectLinkSection = document.createElement('div');
         projectLinkSection.className = "project-link-section";
 
         const projectLink = document.createElement('a');
         projectLink.href = project.link;
-        
         projectLink.textContent = 'View on Github';
         projectLink.className = 'view-button';
         projectLink.target = '_blank';
-        
+        projectLink.rel = 'noopener noreferrer';
         projectLink.appendChild(githubImage);
         projectLinkSection.appendChild(projectLink);
 
         if (project.hasOwnProperty("extra-link")) {
             const projectLink2 = document.createElement('a');
             projectLink2.href = project["extra-link"]["link-url"];
-            
             projectLink2.textContent = project["extra-link"]["link-text"];
             projectLink2.className = 'view-button-2';
             projectLink2.target = '_blank';
+            projectLink2.rel = 'noopener noreferrer';
 
             if (project["extra-link"]["link-img"]) {
                 const extraImg = document.createElement("img");
                 extraImg.src = project["extra-link"]["link-img"];
-                extraImg.width = "30";
+                extraImg.width = 30;
+                extraImg.alt = project["extra-link"]["link-text"] || 'link image';
+                extraImg.loading = 'lazy';
                 projectLink2.appendChild(extraImg);
             }
 
