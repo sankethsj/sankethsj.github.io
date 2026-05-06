@@ -4,10 +4,11 @@ const URL = "https://api.github.com/repos/sankethsj/newspaper-bot/contents/outpu
 const PAPER_MAP = {
     'KANPRABHA': { title: 'Kannada Prabha', region: 'Mangaluru' },
     'HOSADIGANTHA': { title: 'Hosadiganta', region: 'Mangaluru' },
-    'VISHWAVANI': { title: 'Vishwavani', region: 'Bengaluru' }
+    'VISHWAVANI': { title: 'Vishwavani', region: 'Bengaluru' },
+    'PRAJAVANI': { title: 'Prajavani', region: 'Bengaluru' },
 };
 
-const PREFERRED_ORDER = ['KANPRABHA', 'HOSADIGANTHA', 'VISHWAVANI'];
+const PREFERRED_ORDER = ['KANPRABHA', 'PRAJAVANI', 'HOSADIGANTHA', 'VISHWAVANI'];
 
 async function fetchPapers() {
     const response = await fetch(URL);
