@@ -1,0 +1,996 @@
+{
+    "Andhra Pradesh": {
+        "capital": "Amaravati",
+        "zone": "Southern India",
+        "tagline": "Spaceport of India & Aquaculture Leader",
+        "sources": [
+            "ISRO",
+            "Marine Products Export Development Authority (MPEDA)",
+            "Spices Board of India"
+        ],
+        "contributions": [
+            {
+                "icon": "🚀",
+                "title": "ISRO Space Launch Base",
+                "desc": "All Indian satellite and interplanetary missions (Chandrayaan, Aditya-L1) launch from Sriharikota."
+            },
+            {
+                "icon": "🦐",
+                "title": "Seafood & Shrimp Farming",
+                "desc": "Commands over 65% of India's farmed shrimp exports, making India a global seafood supplier."
+            },
+            {
+                "icon": "🌶️",
+                "title": "Guntur Chilli & Spices",
+                "desc": "Guntur hosts Asia's largest chilli yard, supplying high-capsaicin chillies globally."
+            }
+        ]
+    },
+    "Arunachal Pradesh": {
+        "capital": "Itanagar",
+        "zone": "Northeastern India",
+        "tagline": "Land of Dawn-Lit Mountains & Hydropower Potential",
+        "sources": [
+            "Central Electricity Authority (CEA)",
+            "National Horticulture Board (NHB)"
+        ],
+        "contributions": [
+            {
+                "icon": "⚡",
+                "title": "Hydropower Reservoir",
+                "desc": "Holds over 50,000 MW of national hydroelectric potential across the Dibang and Subansiri basins."
+            },
+            {
+                "icon": "🥝",
+                "title": "Organic Kiwi Leader",
+                "desc": "Produces over 50% of India's domestic kiwi fruit, with certified organic zero-chemical orchards."
+            },
+            {
+                "icon": "🌺",
+                "title": "Orchid Biodiversity",
+                "desc": "Known as the Orchid Paradise of India, harboring over 500 indigenous orchid species."
+            }
+        ]
+    },
+    "Assam": {
+        "capital": "Dispur",
+        "zone": "Northeastern India",
+        "tagline": "Tea Capital & Petroleum Pioneer",
+        "sources": [
+            "Tea Board of India",
+            "Ministry of Petroleum and Natural Gas",
+            "Central Silk Board"
+        ],
+        "contributions": [
+            {
+                "icon": "🍵",
+                "title": "Assam Orthodox & CTC Tea",
+                "desc": "Produces over 52% of all tea grown in India, commanding prime international tea auctions."
+            },
+            {
+                "icon": "🛢️",
+                "title": "Digboi Oil Exploration",
+                "desc": "Home to Asia's oldest operational oil well and refinery (operating since 1901)."
+            },
+            {
+                "icon": "🐛",
+                "title": "Golden Muga Silk",
+                "desc": "Holds the global monopoly on wild golden Muga silk, renowned for its natural luster and durability."
+            }
+        ]
+    },
+    "Bihar": {
+        "capital": "Patna",
+        "zone": "Eastern India",
+        "tagline": "Makhana Capital, Litchi & Resilient Human Capital",
+        "sources": [
+            "Indian Council of Agricultural Research (ICAR)",
+            "APEDA",
+            "Ministry of Tourism"
+        ],
+        "contributions": [
+            {
+                "icon": "🥣",
+                "title": "Fox Nuts (Makhana)",
+                "desc": "Produces approximately 90% of the world's commercial Fox Nut (Euryale ferox) harvest."
+            },
+            {
+                "icon": "🍒",
+                "title": "Shahi Litchi",
+                "desc": "GI-tagged aromatic sweet litchis from Muzaffarpur exported across the world."
+            },
+            {
+                "icon": "📜",
+                "title": "Civil Services & Heritage",
+                "desc": "Cradle of ancient learning (Nalanda, Bodh Gaya) and a vital contributor of civil engineers and civil servants."
+            }
+        ]
+    },
+    "Chhattisgarh": {
+        "capital": "Raipur",
+        "zone": "Central India",
+        "tagline": "Rice Bowl of Central India & Steel Hub",
+        "sources": [
+            "Indian Bureau of Mines (IBM)",
+            "Ministry of Steel",
+            "Central Electricity Authority (CEA)"
+        ],
+        "contributions": [
+            {
+                "icon": "🏭",
+                "title": "Bhilai Steel Plant",
+                "desc": "Sole domestic manufacturer and supplier of specialized long rail tracks to the Indian Railways."
+            },
+            {
+                "icon": "⛏️",
+                "title": "Tin Ore Monopoly",
+                "desc": "The only state in India producing commercial-grade tin ore (cassiterite)."
+            },
+            {
+                "icon": "⚡",
+                "title": "Power-Surplus Grid",
+                "desc": "Major pithead thermal power producer, feeding reliable base-load energy into the national grid."
+            }
+        ]
+    },
+    "Goa": {
+        "capital": "Panaji",
+        "zone": "Western India",
+        "tagline": "Maritime Tourism & Naval Shipbuilding",
+        "sources": [
+            "Ministry of Tourism",
+            "Ministry of Defence / Goa Shipyard",
+            "APEDA"
+        ],
+        "contributions": [
+            {
+                "icon": "🏖️",
+                "title": "Global Leisure Tourism",
+                "desc": "Anchors India's international beach tourism economy, contributing significantly to foreign exchange."
+            },
+            {
+                "icon": "🚢",
+                "title": "Naval Warship Construction",
+                "desc": "Goa Shipyard Limited builds stealth offshore patrol vessels and missile craft for the Indian Navy."
+            },
+            {
+                "icon": "🍸",
+                "title": "Cashew Feni Heritage",
+                "desc": "Distills GI-protected heritage cashew spirit along with leading cashew processing facilities."
+            }
+        ]
+    },
+    "Gujarat": {
+        "capital": "Gandhinagar",
+        "zone": "Western India",
+        "tagline": "Petrochemicals, Diamonds & Dairy Pioneer",
+        "sources": [
+            "Gem & Jewellery Export Promotion Council (GJEPC)",
+            "Ministry of Petroleum",
+            "Salt Commissionerate",
+            "NDDB"
+        ],
+        "contributions": [
+            {
+                "icon": "💎",
+                "title": "Diamond Processing",
+                "desc": "Surat cuts and polishes over 90% of the world's rough diamonds."
+            },
+            {
+                "icon": "🛢️",
+                "title": "Refining & Petrochemicals",
+                "desc": "Jamnagar hosts the world's largest integrated petroleum refining and petrochemical complex."
+            },
+            {
+                "icon": "🥛",
+                "title": "White Revolution (Amul)",
+                "desc": "Pioneered the cooperative dairy model (Operation Flood), powering India into the top global milk producer."
+            },
+            {
+                "icon": "🧂",
+                "title": "Salt Production",
+                "desc": "Supplies over 75% of India's total industrial and edible salt from the Rann of Kutch and Gulf of Khambhat."
+            }
+        ]
+    },
+    "Haryana": {
+        "capital": "Chandigarh",
+        "zone": "Northern India",
+        "tagline": "Automobile Core, Sports Champions & Dairy",
+        "sources": [
+            "Society of Indian Automobile Manufacturers (SIAM)",
+            "Sports Authority of India (SAI)",
+            "ICAR-NDRI"
+        ],
+        "contributions": [
+            {
+                "icon": "🚘",
+                "title": "Passenger Car Assembly",
+                "desc": "Gurugram and Manesar plants build ~50% of all passenger cars sold in India (Maruti Suzuki)."
+            },
+            {
+                "icon": "🥇",
+                "title": "Olympic Sports Podium",
+                "desc": "Produces an outsized share of India's Olympic medalists in wrestling, boxing, and javelin (Neeraj Chopra)."
+            },
+            {
+                "icon": "🐃",
+                "title": "Murrah Dairy Genetics",
+                "desc": "Known as the home of Murrah buffaloes ('Black Gold'), supplying high-yield genetics across India."
+            }
+        ]
+    },
+    "Himachal Pradesh": {
+        "capital": "Shimla",
+        "zone": "Northern India",
+        "tagline": "Apple State & Asia's Pharma Hub",
+        "sources": [
+            "National Horticulture Board (NHB)",
+            "Pharmexcil",
+            "Central Electricity Authority (CEA)"
+        ],
+        "contributions": [
+            {
+                "icon": "💊",
+                "title": "Baddi Pharma Hub",
+                "desc": "Asia's largest pharma formulation cluster, manufacturing ~35% of all domestic medicines."
+            },
+            {
+                "icon": "🍎",
+                "title": "Apple Cultivation",
+                "desc": "Produces premium Kinnaur and Shimla apples that supply wholesale markets nationwide."
+            },
+            {
+                "icon": "⚡",
+                "title": "Run-of-the-River Hydropower",
+                "desc": "Major supplier of clean hydroelectric energy across Northern India through Sutlej and Beas projects."
+            }
+        ]
+    },
+    "Jharkhand": {
+        "capital": "Ranchi",
+        "zone": "Eastern India",
+        "tagline": "Mineral Reserves & Heavy Engineering",
+        "sources": [
+            "Indian Bureau of Mines (IBM)",
+            "Ministry of Coal",
+            "Ministry of Steel"
+        ],
+        "contributions": [
+            {
+                "icon": "⛏️",
+                "title": "Mineral Wealth",
+                "desc": "Holds roughly 40% of India's total mineral reserves, including prime coking coal, iron ore, and mica."
+            },
+            {
+                "icon": "🏭",
+                "title": "Pioneer Steel (Jamshedpur)",
+                "desc": "India's first planned industrial city and home to Tata Steel, driving domestic manufacturing since 1907."
+            },
+            {
+                "icon": "⚡",
+                "title": "Heavy Machine Castings",
+                "desc": "Heavy Engineering Corporation (HEC Ranchi) builds launch pad structures for space rockets."
+            }
+        ]
+    },
+    "Karnataka": {
+        "capital": "Bengaluru",
+        "zone": "Southern India",
+        "tagline": "Silicon Valley & Aerospace Capital",
+        "sources": [
+            "NASSCOM",
+            "ISRO",
+            "Coffee Board of India",
+            "Central Silk Board"
+        ],
+        "contributions": [
+            {
+                "icon": "💻",
+                "title": "IT & Software Exports",
+                "desc": "Generates over 35% of India's total software exports and houses 40+ tech unicorn startups."
+            },
+            {
+                "icon": "🚀",
+                "title": "Aerospace & Space Headquarters",
+                "desc": "Headquarters of ISRO, HAL, and India's prime aerospace and defense manufacturing belt."
+            },
+            {
+                "icon": "☕",
+                "title": "Coffee & Mulberry Silk",
+                "desc": "Produces ~70% of India's coffee (Coorg, Chikmagalur) and over 45% of total raw mulberry silk."
+            }
+        ]
+    },
+    "Kerala": {
+        "capital": "Thiruvananthapuram",
+        "zone": "Southern India",
+        "tagline": "Spice Coast, Rubber & Human Capital",
+        "sources": [
+            "Rubber Board of India",
+            "Spices Board of India",
+            "NITI Aayog (SDG India Index)"
+        ],
+        "contributions": [
+            {
+                "icon": "🌳",
+                "title": "Natural Rubber Production",
+                "desc": "Supplies over 75% of India's domestic natural rubber, vital for the automotive tire sector."
+            },
+            {
+                "icon": "🌿",
+                "title": "Cardamom & Black Pepper",
+                "desc": "Historic spice coast commanding premium pricing for green cardamom and Malabar black pepper."
+            },
+            {
+                "icon": "👨‍⚕️",
+                "title": "Human Development & Remittances",
+                "desc": "Highest national literacy and health indices; healthcare diaspora powers vital foreign remittances."
+            }
+        ]
+    },
+    "Madhya Pradesh": {
+        "capital": "Bhopal",
+        "zone": "Central India",
+        "tagline": "Heart of India, Pulses & Diamond Mines",
+        "sources": [
+            "Directorate of Economics & Statistics (DES)",
+            "Indian Bureau of Mines (IBM)",
+            "National Tiger Conservation Authority (NTCA)"
+        ],
+        "contributions": [
+            {
+                "icon": "🌱",
+                "title": "Pulses & Soybeans ('Soya State')",
+                "desc": "Highest producer of pulses and soybeans in India; major producer of high-grade Sharbati wheat."
+            },
+            {
+                "icon": "💎",
+                "title": "Panna Diamond Mines",
+                "desc": "Operates the only mechanized, industrial diamond mining project in the country."
+            },
+            {
+                "icon": "🐅",
+                "title": "Forests & Tiger Conservation",
+                "desc": "Holds India's largest forest canopy area and highest tiger count across Kanha, Pench, and Bandhavgarh."
+            }
+        ]
+    },
+    "Maharashtra": {
+        "capital": "Mumbai",
+        "zone": "Western India",
+        "tagline": "Financial Capital & Industrial Engine",
+        "sources": [
+            "Reserve Bank of India (RBI)",
+            "SIAM",
+            "APEDA",
+            "Jawaharlal Nehru Port Authority (JNPA)"
+        ],
+        "contributions": [
+            {
+                "icon": "🏦",
+                "title": "Financial Headquarters",
+                "desc": "Houses the RBI, BSE, NSE, SEBI, generating ~14% of national GDP and leading direct tax collections."
+            },
+            {
+                "icon": "🚗",
+                "title": "Automotive Engineering",
+                "desc": "Major production corridors in Pune and Chakan (Tata Motors, Bajaj Auto, Mahindra & Mahindra)."
+            },
+            {
+                "icon": "🧅",
+                "title": "Onions & Grape Exports",
+                "desc": "Nashik anchors onion supply security for the subcontinent and serves as the Wine Capital of India."
+            },
+            {
+                "icon": "🎬",
+                "title": "Bollywood & Media",
+                "desc": "The entertainment epicenter of India, generating extensive creative employment and global outreach."
+            }
+        ]
+    },
+    "Manipur": {
+        "capital": "Imphal",
+        "zone": "Northeastern India",
+        "tagline": "Jewel of India & Olympic Boxing Hub",
+        "sources": [
+            "Ministry of Youth Affairs and Sports",
+            "APEDA (GI Registry)",
+            "Ministry of Environment, Forest and Climate Change (MoEFCC)"
+        ],
+        "contributions": [
+            {
+                "icon": "🥊",
+                "title": "Sports Powerhouse",
+                "desc": "Produces world champion boxers, weightlifters, and football athletes (Mary Kom, Mirabai Chanu)."
+            },
+            {
+                "icon": "🌾",
+                "title": "Black Rice (Chak-Hao)",
+                "desc": "GI-tagged black aromatic rice with exceptional anthocyanin antioxidant profiles."
+            },
+            {
+                "icon": "🦌",
+                "title": "Loktak Lake & Sangai Deer",
+                "desc": "World's only floating national park (Keibul Lamjao), home to the endangered brow-antlered Sangai deer."
+            }
+        ]
+    },
+    "Meghalaya": {
+        "capital": "Shillong",
+        "zone": "Northeastern India",
+        "tagline": "Abode of Clouds & Organic Spices",
+        "sources": [
+            "Spices Board of India",
+            "Indian Bureau of Mines (IBM)"
+        ],
+        "contributions": [
+            {
+                "icon": "🌿",
+                "title": "Lakadong Turmeric",
+                "desc": "Grows world-renowned turmeric containing the highest recorded curcumin concentration (7% to 12%)."
+            },
+            {
+                "icon": "🌉",
+                "title": "Living Root Bio-Engineering",
+                "desc": "Indigenous Khasi and Jaintia living root bridges (Jingkieng Jri) recognized globally for sustainable infrastructure."
+            },
+            {
+                "icon": "⛏️",
+                "title": "High-Grade Limestone",
+                "desc": "Major exporter of high-grade limestone feeding regional cement plants across Eastern India and Bangladesh."
+            }
+        ]
+    },
+    "Mizoram": {
+        "capital": "Aizawl",
+        "zone": "Northeastern India",
+        "tagline": "Bamboo Frontier & High Literacy",
+        "sources": [
+            "National Bamboo Mission",
+            "Ministry of Development of North Eastern Region (MDoNER)"
+        ],
+        "contributions": [
+            {
+                "icon": "🎋",
+                "title": "Bamboo Forest Reserves",
+                "desc": "Over 50% of the state's geographical area is under bamboo, feeding paper and timber-substitute industries."
+            },
+            {
+                "icon": "🌶️",
+                "title": "Bird's Eye Chilli & Anthuriums",
+                "desc": "Commercial exporter of high-heat Mizo Bird's Eye Chilli and export-grade cut Anthurium flowers."
+            },
+            {
+                "icon": "🚢",
+                "title": "Kaladan Multi-Modal Gateway",
+                "desc": "Serves as the key transit terminus linking mainland India with Myanmar's Sittwe Port."
+            }
+        ]
+    },
+    "Nagaland": {
+        "capital": "Kohima",
+        "zone": "Northeastern India",
+        "tagline": "Land of Festivals & Naga Mircha Heritage",
+        "sources": [
+            "Spices Board of India",
+            "MoEFCC",
+            "Ministry of Tourism"
+        ],
+        "contributions": [
+            {
+                "icon": "🌶️",
+                "title": "Naga Mircha (King Chilli)",
+                "desc": "GI-tagged chili consistently ranking among the hottest naturally occurring peppers on Earth (>1,000,000 SHU)."
+            },
+            {
+                "icon": "🌲",
+                "title": "Community Forest Conservation",
+                "desc": "Pioneered Khonoma Green Village, Asia's premier community-managed sanctuary for biodiversity."
+            },
+            {
+                "icon": "🎉",
+                "title": "Hornbill Cultural Festival",
+                "desc": "The 'Festival of Festivals' preserves and showcases the distinct traditions of 17 major indigenous tribes."
+            }
+        ]
+    },
+    "Odisha": {
+        "capital": "Bhubaneswar",
+        "zone": "Eastern India",
+        "tagline": "Mineral Wealth, Metallurgy & Sports Patron",
+        "sources": [
+            "Indian Bureau of Mines (IBM)",
+            "Ministry of Steel",
+            "Hockey India"
+        ],
+        "contributions": [
+            {
+                "icon": "⛏️",
+                "title": "Iron Ore & Bauxite Extraction",
+                "desc": "Supplies over 50% of India's iron ore and over 70% of total national bauxite production."
+            },
+            {
+                "icon": "🏗️",
+                "title": "Steel & Aluminum Capital",
+                "desc": "Major industrial smelting clusters in Rourkela, Kalinganagar, and Angul (Tata Steel, Jindal, NALCO)."
+            },
+            {
+                "icon": "🏑",
+                "title": "National Hockey Revival",
+                "desc": "Prime official sponsor and infrastructural architect behind India's modern Olympic hockey revival."
+            }
+        ]
+    },
+    "Punjab": {
+        "capital": "Chandigarh",
+        "zone": "Northern India",
+        "tagline": "Granary & Breadbasket of India",
+        "sources": [
+            "Directorate of Economics & Statistics (DES)",
+            "Ministry of Commerce and Industry"
+        ],
+        "contributions": [
+            {
+                "icon": "🌾",
+                "title": "National Food Buffer",
+                "desc": "Largest historic contributor of wheat and rice to the central public distribution pool."
+            },
+            {
+                "icon": "⚽",
+                "title": "Jalandhar Sports Equipment",
+                "desc": "Manufactures world-standard cricket bats, footballs, and track gear exported to international leagues."
+            },
+            {
+                "icon": "🚜",
+                "title": "Tractors & Farm Machinery",
+                "desc": "Major industrial manufacturing center for tractors, combines, and agricultural implements."
+            }
+        ]
+    },
+    "Rajasthan": {
+        "capital": "Jaipur",
+        "zone": "Northern India",
+        "tagline": "Solar Capital, Marble & Strategic Minerals",
+        "sources": [
+            "Ministry of New and Renewable Energy (MNRE)",
+            "Indian Bureau of Mines (IBM)",
+            "Ministry of Tourism"
+        ],
+        "contributions": [
+            {
+                "icon": "☀️",
+                "title": "Bhadla Solar Power Complex",
+                "desc": "Hosts one of the world's largest operational solar parks; leads India in utility-scale solar generation."
+            },
+            {
+                "icon": "🪨",
+                "title": "Lead, Zinc & Marble Monopoly",
+                "desc": "Sole domestic producer of zinc and lead concentrate (Hindustan Zinc); famous Makrana marble used in the Taj Mahal."
+            },
+            {
+                "icon": "🏰",
+                "title": "Heritage Forts & Tourism",
+                "desc": "UNESCO Hill Forts, royal palaces, and desert circuits driving international tourism footfall."
+            }
+        ]
+    },
+    "Sikkim": {
+        "capital": "Gangtok",
+        "zone": "Northeastern India",
+        "tagline": "First 100% Organic State & Cardamom Capital",
+        "sources": [
+            "UN FAO Future Policy Award",
+            "Spices Board of India",
+            "UNESCO"
+        ],
+        "contributions": [
+            {
+                "icon": "🌱",
+                "title": "World's First 100% Organic State",
+                "desc": "Won the UN Future Policy Gold Award for eliminating chemical pesticides and fertilizers across all farmland."
+            },
+            {
+                "icon": "🌿",
+                "title": "Large Black Cardamom",
+                "desc": "Produces over 80% of India's high-value large black cardamom harvest."
+            },
+            {
+                "icon": "🏔️",
+                "title": "Khangchendzonga Biosphere",
+                "desc": "Hosts Mt. Kangchenjunga and UNESCO's first mixed World Heritage Site in India."
+            }
+        ]
+    },
+    "Tamil Nadu": {
+        "capital": "Chennai",
+        "zone": "Southern India",
+        "tagline": "Detroit of Asia & Export Manufacturing Giant",
+        "sources": [
+            "SIAM",
+            "Ministry of Textiles",
+            "MNRE",
+            "DPIIT"
+        ],
+        "contributions": [
+            {
+                "icon": "🚗",
+                "title": "Automotive & Parts Assembly",
+                "desc": "Produces over 35% of India's automobiles (Hyundai, Renault-Nissan, TVS, Royal Enfield, Ashok Leyland)."
+            },
+            {
+                "icon": "🧵",
+                "title": "Tirupur Knitwear Exports",
+                "desc": "Tirupur and Coimbatore supply the majority of India's cotton knitwear and innerwear apparel exports."
+            },
+            {
+                "icon": "📱",
+                "title": "Electronics & Smartphone Assembly",
+                "desc": "Major global smartphone manufacturing corridor in Sriperumbudur (Foxconn, Pegatron, Tata Electronics)."
+            },
+            {
+                "icon": "⚡",
+                "title": "Wind Energy Pioneer",
+                "desc": "National pioneer in wind turbine generation anchored by the Muppandal wind corridor."
+            }
+        ]
+    },
+    "Telangana": {
+        "capital": "Hyderabad",
+        "zone": "Southern India",
+        "tagline": "Vaccine Capital & Genome Valley",
+        "sources": [
+            "Pharmexcil",
+            "IT & Electronics Department, Telangana",
+            "DRDO"
+        ],
+        "contributions": [
+            {
+                "icon": "💉",
+                "title": "Global Vaccine Capital",
+                "desc": "Manufactures one out of every three vaccine doses administered worldwide (Bharat Biotech, Biological E)."
+            },
+            {
+                "icon": "💻",
+                "title": "Tech Megacampuses",
+                "desc": "Hosts the largest overseas engineering campuses for Amazon, Google, and Microsoft in HITEC City."
+            },
+            {
+                "icon": "🛡️",
+                "title": "Missile Defense & Aerospace",
+                "desc": "Primary manufacturing and testing nexus for DRDO, Bharat Dynamics, and private aerospace ventures."
+            }
+        ]
+    },
+    "Tripura": {
+        "capital": "Agartala",
+        "zone": "Northeastern India",
+        "tagline": "Natural Rubber Hub & Bamboo Artisanry",
+        "sources": [
+            "Rubber Board of India",
+            "APEDA",
+            "ONGC"
+        ],
+        "contributions": [
+            {
+                "icon": "🌳",
+                "title": "Second Largest Rubber Producer",
+                "desc": "Ranks second after Kerala in national natural rubber acreage and sheet output."
+            },
+            {
+                "icon": "🍍",
+                "title": "Queen Pineapple",
+                "desc": "Produces the sweet, GI-tagged Queen Pineapple variety exported to Middle Eastern markets."
+            },
+            {
+                "icon": "🔥",
+                "title": "Clean Natural Gas Generation",
+                "desc": "ONGC gas reserves generate clean, efficient electricity exported to neighboring states and Bangladesh."
+            }
+        ]
+    },
+    "Uttar Pradesh": {
+        "capital": "Lucknow",
+        "zone": "Northern India",
+        "tagline": "Agricultural Giant & Artisanal Heartland",
+        "sources": [
+            "Ministry of Agriculture",
+            "Council for Leather Exports",
+            "DPIIT (ODOP Project)"
+        ],
+        "contributions": [
+            {
+                "icon": "🌾",
+                "title": "Sugarcane, Wheat & Milk",
+                "desc": "India's highest producer of sugarcane, wheat, potatoes, and total dairy milk output."
+            },
+            {
+                "icon": "🏺",
+                "title": "One District One Product (ODOP)",
+                "desc": "Moradabad brassware, Bhadohi carpets, Lucknow Chikankari, and Firozabad glassware lead artisanal exports."
+            },
+            {
+                "icon": "👞",
+                "title": "Kanpur & Agra Leather",
+                "desc": "Massive leather tanning and safety shoe manufacturing ecosystem supplying defense and global buyers."
+            },
+            {
+                "icon": "💻",
+                "title": "Noida Mobile Manufacturing",
+                "desc": "Major smartphone assembly and software engineering hub within the National Capital Region."
+            }
+        ]
+    },
+    "Uttarakhand": {
+        "capital": "Dehradun / Gairsain",
+        "zone": "Northern India",
+        "tagline": "Devbhoomi, River Lifelines & Green Hydropower",
+        "sources": [
+            "Central Electricity Authority (CEA)",
+            "Ministry of Tourism",
+            "State Infrastructure & Industrial Development Corporation of Uttarakhand (SIDCUL)"
+        ],
+        "contributions": [
+            {
+                "icon": "🌊",
+                "title": "Glacial Origins of Holy Rivers",
+                "desc": "Source of the Bhagirathi/Ganga (Gangotri) and Yamuna (Yamunotri), which sustain over 400 million people."
+            },
+            {
+                "icon": "⚡",
+                "title": "Tehri Hydroelectric Complex",
+                "desc": "One of the tallest rock-fill dams globally, stabilizing northern grid peak-demand frequency."
+            },
+            {
+                "icon": "🧘",
+                "title": "Global Yoga & Wellness (Rishikesh)",
+                "desc": "Celebrated worldwide as the Yoga Capital, anchoring India's international spiritual tourism."
+            },
+            {
+                "icon": "🏭",
+                "title": "SIDCUL Manufacturing Belt",
+                "desc": "Pantnagar and Haridwar host major automobile (Hero, Bajaj) and FMCG manufacturing plants."
+            }
+        ]
+    },
+    "West Bengal": {
+        "capital": "Kolkata",
+        "zone": "Eastern India",
+        "tagline": "Golden Fiber, Darjeeling Tea & Marine Gateway",
+        "sources": [
+            "Jute Board of India",
+            "Tea Board of India",
+            "Syama Prasad Mookerjee Port Authority"
+        ],
+        "contributions": [
+            {
+                "icon": "🌾",
+                "title": "Paddy Rice & Raw Jute",
+                "desc": "Largest producer of rice in India and dominant producer of raw eco-friendly jute fiber packaging."
+            },
+            {
+                "icon": "🍵",
+                "title": "Darjeeling Champagne Tea",
+                "desc": "The first Indian commodity to receive a GI tag, setting the international gold standard for aromatic tea."
+            },
+            {
+                "icon": "🚢",
+                "title": "Riverine Maritime Hub",
+                "desc": "Kolkata and Haldia ports serve as the primary maritime gateways for landlocked Nepal, Bhutan, and the Northeast."
+            }
+        ]
+    },
+    "Andaman and Nicobar Islands": {
+        "capital": "Port Blair (Sri Vijaya Puram)",
+        "zone": "Island Territory",
+        "tagline": "Maritime Sentinel & Deep-Sea Biodiversity",
+        "sources": [
+            "Ministry of Defence (Andaman & Nicobar Command)",
+            "Ministry of Ports, Shipping and Waterways"
+        ],
+        "contributions": [
+            {
+                "icon": "⚓",
+                "title": "Strategic Tri-Service Command",
+                "desc": "Hosts India's sole unified tri-service theater command, dominating critical sea lanes of the Malacca Strait."
+            },
+            {
+                "icon": "🚢",
+                "title": "Galathea Bay Transshipment Hub",
+                "desc": "Great Nicobar international mega-transshipment container port, intercepting major East-West shipping routes."
+            },
+            {
+                "icon": "🐟",
+                "title": "Pristine Marine Fisheries",
+                "desc": "Vast 600,000 sq km Exclusive Economic Zone (EEZ) rich in sustainable oceanic yellowfin and skipjack tuna."
+            }
+        ]
+    },
+    "Chandigarh": {
+        "capital": "Chandigarh",
+        "zone": "Northern India",
+        "tagline": "City Beautiful & Premier Urban Planning",
+        "sources": [
+            "Ministry of Housing and Urban Affairs (MoHUA)",
+            "PGIMER",
+            "NITI Aayog"
+        ],
+        "contributions": [
+            {
+                "icon": "🏛️",
+                "title": "Architectural Landmark (Le Corbusier)",
+                "desc": "Masterpiece of modern 20th-century urban design; UNESCO World Heritage Capitol Complex."
+            },
+            {
+                "icon": "🏥",
+                "title": "Regional Medical Hub (PGIMER)",
+                "desc": "Provides tertiary and quaternary healthcare, training, and medical research across five northern states."
+            },
+            {
+                "icon": "📈",
+                "title": "High Per-Capita Income",
+                "desc": "Consistently ranks at the top for urban quality of life, civic cleanliness, and per-capita GDP."
+            }
+        ]
+    },
+    "Dadra and Nagar Haveli and Daman and Diu": {
+        "capital": "Daman",
+        "zone": "Western India",
+        "tagline": "Industrial Polymer Corridor & Coastal Forts",
+        "sources": [
+            "DPIIT",
+            "UT Administration Tourism Department"
+        ],
+        "contributions": [
+            {
+                "icon": "🏭",
+                "title": "Plastics, Polymers & Packaging",
+                "desc": "High concentration of polymer processing, packaging films, and specialized industrial manufacturing."
+            },
+            {
+                "icon": "🏰",
+                "title": "Portuguese Coastal Heritage",
+                "desc": "Moti Daman and Diu forts represent preserved 16th-century Portuguese maritime defense architecture."
+            }
+        ]
+    },
+    "Delhi (NCT)": {
+        "capital": "New Delhi",
+        "zone": "Northern India",
+        "tagline": "National Capital, Policy Epicenter & Startup Hub",
+        "sources": [
+            "Delhi Planning Department",
+            "AAI / DGCA",
+            "Department of Science and Technology"
+        ],
+        "contributions": [
+            {
+                "icon": "🏛️",
+                "title": "Sovereign Governance",
+                "desc": "Seat of the Parliament, Supreme Court, Central Ministries, and foreign diplomatic representations."
+            },
+            {
+                "icon": "✈️",
+                "title": "Aviation Gateway (IGI Airport)",
+                "desc": "India's largest airport and international aviation transit gateway connecting 140+ global destinations."
+            },
+            {
+                "icon": "🎓",
+                "title": "Premier Academic Research",
+                "desc": "Hosts AIIMS, IIT Delhi, and prestigious national universities leading medical and engineering patents."
+            }
+        ]
+    },
+    "Jammu & Kashmir": {
+        "capital": "Srinagar / Jammu",
+        "zone": "Northern India",
+        "tagline": "Saffron, Pashmina & High-Altitude Horticulture",
+        "sources": [
+            "Spices Board of India",
+            "Geological Survey of India (GSI)",
+            "Directorate of Handlooms and Handicrafts J&K"
+        ],
+        "contributions": [
+            {
+                "icon": "🌺",
+                "title": "GI Kashmiri Saffron",
+                "desc": "Pampore saffron commands world-class valuation for its deep crimson color, crocin aroma, and medicinal potency."
+            },
+            {
+                "icon": "🧣",
+                "title": "Pashmina & Kani Shawl Weaving",
+                "desc": "Centuries-old handloom heritage converting Changthangi goat wool into luxury Pashmina shawls."
+            },
+            {
+                "icon": "🔋",
+                "title": "Salal-Haimana Lithium Inferred Reserves",
+                "desc": "GSI discovery of 5.9 million tonnes of lithium reserves in Reasi, crucial for EV battery independence."
+            },
+            {
+                "icon": "🏏",
+                "title": "Kashmir Willow Cricket Bats",
+                "desc": "Supplies premium shock-resistant cricket bats used by batsmen across test-playing nations."
+            }
+        ]
+    },
+    "Ladakh": {
+        "capital": "Leh / Kargil",
+        "zone": "Northern India",
+        "tagline": "Cold Desert Renewable Frontier & High-Altitude Astronomy",
+        "sources": [
+            "MNRE",
+            "Indian Institute of Astrophysics (IIA)",
+            "National Institute of Sowa-Rigpa"
+        ],
+        "contributions": [
+            {
+                "icon": "🔭",
+                "title": "Hanle Dark Sky Reserve & IAO",
+                "desc": "Hosts the Indian Astronomical Observatory at 4,500m elevation—one of the world's highest optical and infrared observatories."
+            },
+            {
+                "icon": "☀️",
+                "title": "Mega Solar & Geothermal Energy",
+                "desc": "Developing a 13 GW mega solar power complex and clean geothermal energy pilots at Puga Valley."
+            },
+            {
+                "icon": "🐐",
+                "title": "Raw Cashmere/Pashmina Fiber",
+                "desc": "Changpa nomadic pastoralists rear high-altitude Changthangi goats producing the world's finest Pashmina fiber."
+            }
+        ]
+    },
+    "Lakshadweep": {
+        "capital": "Kavaratti",
+        "zone": "Island Territory",
+        "tagline": "Coral Archipelago & Sustainable Pole-and-Line Tuna",
+        "sources": [
+            "Marine Products Export Development Authority (MPEDA)",
+            "ICAR-Central Marine Fisheries Research Institute (CMFRI)"
+        ],
+        "contributions": [
+            {
+                "icon": "🎣",
+                "title": "Pole-and-Line Skipjack Tuna",
+                "desc": "Eco-friendly, dolphin-safe pole-and-line fishing producing certified high-grade Masmin dried tuna."
+            },
+            {
+                "icon": "🥥",
+                "title": "Organic Micro-Variety Coconut",
+                "desc": "Grows pesticide-free organic island coconuts and manufactures high-grade coconut coir yarn."
+            },
+            {
+                "icon": "🪸",
+                "title": "Intact Coral Atoll Ecosystems",
+                "desc": "Living laboratory for marine bio-conservation, carbon sequestration, and low-impact eco-tourism."
+            }
+        ]
+    },
+    "Puducherry": {
+        "capital": "Puducherry",
+        "zone": "Southern India",
+        "tagline": "Franco-Tamil Heritage & Experimental Township",
+        "sources": [
+            "Ministry of Tourism",
+            "Auroville Foundation",
+            "Planning and Research Department, Puducherry"
+        ],
+        "contributions": [
+            {
+                "icon": "🌐",
+                "title": "Auroville Experimental Township",
+                "desc": "UNESCO-endorsed international township pioneering earthen architecture, afforestation, and solar cooking."
+            },
+            {
+                "icon": "🏛️",
+                "title": "French Colonial Heritage Tourism",
+                "desc": "Preserved French quarter architecture and coastal promenades attracting domestic and French tourists."
+            },
+            {
+                "icon": "⚙️",
+                "title": "Precision Instruments & Leather Goods",
+                "desc": "Specialized clusters producing exported leather accessories, pharmaceuticals, and precision electronic components."
+            }
+        ]
+    }
+}

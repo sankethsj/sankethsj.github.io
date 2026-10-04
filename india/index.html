@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>India State Contributions (Isolated Map)</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <style>
+        :root {
+            --bg-canvas: #f1f5f9;
+            --card-bg: #ffffff;
+            --primary: #1e3a8a;
+            --state-fill: #cbd5e1;
+            --state-stroke: #475569;
+            --state-hover: #38bdf8;
+            --state-active: #f97316;
+            --text: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background: var(--bg-canvas);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Top Bar */
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border);
+            padding: 0.8rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .badge-info {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            background: var(--bg-canvas);
+            padding: 0.3rem 0.7rem;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+        }
+
+        /* Main Grid */
+        .workspace {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* Map Box - No tiles, only India GeoJSON vectors */
+        #map-box {
+            flex: 1.5;
+            background: #e2e8f0;
+            /* Pure clean background canvas */
+            position: relative;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+        }
+
+        .geojson-source-link {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            z-index: 1000;
+            display: grid;
+            width: 24px;
+            height: 24px;
+            place-items: center;
+            border: 1px solid #94a3b8;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            color: #334155;
+            font-family: Georgia, serif;
+            font-size: 15px;
+            font-style: italic;
+            font-weight: 700;
+            line-height: 1;
+            text-decoration: none;
+        }
+
+        .geojson-source-link:hover {
+            background: #ffffff;
+            color: #0f172a;
+        }
+
+        .leaflet-interactive:focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        /* Info Sidebar */
+        .sidebar {
+            flex: 1;
+            max-width: 480px;
+            min-width: 340px;
+            background: var(--card-bg);
+            border-left: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+            overflow-y: auto;
+        }
+
+        .empty-state {
+            margin: auto;
+            text-align: center;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* State Content Card */
+        .state-header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .zone-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #0369a1;
+            background: #e0f2fe;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .state-title {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-top: 0.3rem;
+        }
+
+        .state-capital {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .state-tagline {
+            font-style: italic;
+            color: #475569;
+            margin-top: 0.4rem;
+            font-size: 0.95rem;
+        }
+
+        .section-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .contributions-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .contrib-card {
+            background: var(--bg-canvas);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 0.75rem 1rem;
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+        }
+
+        .contrib-icon {
+            font-size: 1.4rem;
+        }
+
+        .contrib-info h4 {
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+            color: var(--text);
+        }
+
+        .contrib-info p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.35;
+        }
+
+        /* Tooltip styles */
+        .leaflet-tooltip.state-label {
+            background-color: rgba(15, 23, 42, 0.9);
+            color: #ffffff;
+            border: none;
+            font-size: 0.8rem;
+            border-radius: 4px;
+            padding: 4px 8px;
+        }
+
+        @media (max-width: 760px) {
+            body {
+                height: auto;
+                min-height: 100vh;
+                min-height: 100dvh;
+                overflow: auto;
+            }
+
+            header {
+                flex-wrap: wrap;
+                gap: 0.6rem 1rem;
+                padding: 0.8rem 1rem;
+            }
+
+            header h1 {
+                font-size: 1.1rem;
+            }
+
+            .badge-info {
+                font-size: 0.75rem;
+            }
+
+            .workspace {
+                flex-direction: column;
+                flex: initial;
+                overflow: visible;
+            }
+
+            #map-box {
+                flex: none;
+                height: clamp(280px, 48vh, 440px);
+            }
+
+            .sidebar {
+                flex: none;
+                width: 100%;
+                max-width: none;
+                min-width: 0;
+                border-left: 0;
+                border-top: 1px solid var(--border);
+                padding: 1.25rem 1rem;
+                overflow: visible;
+            }
+
+            .state-title {
+                font-size: 1.6rem;
+            }
+
+            .leaflet-control-zoom a {
+                width: 40px !important;
+                height: 40px !important;
+                line-height: 40px !important;
+            }
+        }
+
+        @media (max-width: 420px) {
+            header {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .badge-info {
+                max-width: 100%;
+                border-radius: 8px;
+            }
+
+            .contrib-card {
+                padding: 0.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🇮🇳 India State Contributions</h1>
+    </header>
+
+    <div class="workspace">
+        <div id="map-box">
+            <div id="map"></div>
+            <a
+                class="geojson-source-link"
+                href="https://github.com/udit-001/india-maps-data/blob/main/geojson/india.geojson"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View India GeoJSON data source"
+                title="View GeoJSON data source"
+            >i</a>
+        </div>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="empty-state">
+                <h3>Click any state on the map</h3>
+                <p>The state will highlight, and its economic and cultural contributions will be read from
+                    <code>data.json</code>.
+                </p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+        let stateContributions = {};
+        let activeLayer = null;
+
+        // 1. Initialize Leaflet Map WITHOUT tile layers (No World Map, No Other Countries)
+        const map = L.map('map', {
+            zoomControl: true,
+            attributionControl: false,
+            minZoom: 4,
+            maxZoom: 7
+        });
+
+        // 2. Fetch both the external data.json AND India states GeoJSON
+        async function initApp() {
+            try {
+                // Fetch JSON dataset
+                const jsonResponse = await fetch('./data.json');
+                if (!jsonResponse.ok) throw new Error("Could not load data.json");
+                stateContributions = await jsonResponse.json();
+
+                // Fetch India states GeoJSON
+                const geoResponse = await fetch('https://raw.githubusercontent.com/udit-001/india-maps-data/main/geojson/india.geojson');
+                const geojsonData = await geoResponse.json();
+
+                // Render GeoJSON polygons
+                const geoLayer = L.geoJSON(geojsonData, {
+                    style: defaultStyle,
+                    onEachFeature: onEachFeature
+                }).addTo(map);
+
+                // Zoom map camera directly to fit India exactly
+                map.fitBounds(geoLayer.getBounds());
+
+            } catch (err) {
+                console.error(err);
+                document.getElementById('sidebar').innerHTML = `
+          <div class="empty-state" style="color:#b91c1c;">
+            <h3>Failed to load JSON data</h3>
+            <p>Ensure you are running this with a local web server (e.g. <code>npx serve</code> or VS Code Live Server) so that <code>fetch('data.json')</code> is permitted by browser security.</p>
+          </div>
+        `;
+            }
+        }
+
+        // Default polygon style for states
+        function defaultStyle() {
+            return {
+                fillColor: '#cbd5e1',
+                weight: 1.2,
+                opacity: 1,
+                color: '#475569',
+                fillOpacity: 0.8
+            };
+        }
+
+        // Hover & Click interaction for each state
+        function onEachFeature(feature, layer) {
+            // Extract state name from GeoJSON properties
+            const rawName = feature.properties.NAME_1 || feature.properties.st_nm || feature.properties.name;
+
+            // Tooltip with state name
+            layer.bindTooltip(`<strong>${rawName}</strong>`, {
+                className: 'state-label',
+                direction: 'center',
+                permanent: false
+            });
+
+            layer.on({
+                mouseover: (e) => {
+                    if (e.target !== activeLayer) {
+                        e.target.setStyle({
+                            fillColor: '#38bdf8',
+                            fillOpacity: 1,
+                            weight: 2
+                        });
+                    }
+                },
+                mouseout: (e) => {
+                    if (e.target !== activeLayer) {
+                        e.target.setStyle(defaultStyle());
+                    }
+                },
+                click: (e) => {
+                    // Reset previous active layer
+                    if (activeLayer) {
+                        activeLayer.setStyle(defaultStyle());
+                    }
+                    activeLayer = e.target;
+                    activeLayer.setStyle({
+                        fillColor: '#f97316',
+                        fillOpacity: 1,
+                        weight: 2,
+                        color: '#c2410c'
+                    });
+
+                    displayStateData(rawName);
+                }
+            });
+        }
+
+        function normalizeStateName(name) {
+            if (!name) return name;
+
+            const aliases = {
+                "orissa": "Odisha",
+                "jammu and kashmir": "Jammu & Kashmir",
+                "jammu & kashmir": "Jammu & Kashmir",
+                "jammu and kashmir (ut)": "Jammu & Kashmir"
+            };
+
+            const normalized = name
+                .trim()
+                .replace(/&/g, 'and')
+                .replace(/[^a-zA-Z0-9 ]/g, ' ')
+                .replace(/\s+/g, ' ')
+                .trim()
+                .toLowerCase();
+
+            if (aliases[normalized]) {
+                return aliases[normalized];
+            }
+
+            const matchingKey = Object.keys(stateContributions).find((key) => {
+                const keyMatch = key
+                    .replace(/&/g, 'and')
+                    .replace(/[^a-zA-Z0-9 ]/g, ' ')
+                    .replace(/\s+/g, ' ')
+                    .trim()
+                    .toLowerCase();
+                return keyMatch === normalized;
+            });
+
+            return matchingKey || name;
+        }
+
+        // Render the state's data from JSON into the sidebar
+        function displayStateData(stateName) {
+            const normalizedName = normalizeStateName(stateName);
+            const data = stateContributions[normalizedName];
+            const sidebar = document.getElementById('sidebar');
+
+            if (!data) {
+                sidebar.innerHTML = `
+          <div class="state-header">
+            <h2 class="state-title">${normalizedName}</h2>
+          </div>
+          <p style="color:var(--text-muted); font-size:0.9rem;">
+            Detailed contribution data for this region has not yet been updated.
+          </p>
+        `;
+                return;
+            }
+
+            sidebar.innerHTML = `
+        <div class="state-header">
+          <span class="zone-tag">${data.zone}</span>
+          <h2 class="state-title">${normalizedName}</h2>
+          <p class="state-capital">Capital: <strong>${data.capital}</strong></p>
+          <p class="state-tagline">"${data.tagline}"</p>
+        </div>
+
+        <div class="section-label">Key Economic & Cultural Contributions</div>
+        <div class="contributions-list">
+          ${data.contributions.map(c => `
+            <div class="contrib-card">
+              <span class="contrib-icon">${c.icon}</span>
+              <div class="contrib-info">
+                <h4>${c.title}</h4>
+                <p>${c.desc}</p>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+
+            // Render sources at the bottom of the card
+            if (data.sources && data.sources.length > 0) {
+                const sourcesHTML = `
+    <div style="margin-top: 1.5rem; padding-top: 0.75rem; border-top: 1px dashed var(--border); font-size: 0.75rem; color: var(--text-muted);">
+      <strong>Verified Sources:</strong> ${data.sources.join(" • ")}
+    </div>
+  `;
+                sidebar.insertAdjacentHTML('beforeend', sourcesHTML);
+            }
+        }
+
+        // Initialize application
+        initApp();
+    </script>
+</body>
+
+</html>
